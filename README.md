@@ -6,7 +6,8 @@
 <!-- badges: start -->
 <!-- badges: end -->
 
-The goal of costofliving is to …
+The goal of costofliving is to provide information and calculate the average cost of living to a median household income (family of 4) where 2 parents make minimum wage salaries in 2022. 
+
 
 ## Installation
 
