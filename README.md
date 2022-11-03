@@ -53,3 +53,15 @@ You can also embed plots, for example:
 
 In that case, don’t forget to commit and push the resulting figure
 files, so they display on GitHub and CRAN.
+
+# Contributors
+
+-   \[Thu Tran\](# costofliving
+
+This package contains functions and data sets to calculate the average
+cost of living to a median household income (family of 4) where 2
+parents make minimum wage salaries in 2022.
+
+# Contributors
+
+-   [Thu Tran](https://github.com/thuntran)
