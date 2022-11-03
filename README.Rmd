@@ -16,18 +16,17 @@ knitr::opts_chunk$set(
 # costofliving
 
 <!-- badges: start -->
-[![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
-[![CRAN status](https://www.r-pkg.org/badges/version/costofliving)](https://CRAN.R-project.org/package=costofliving)
 <!-- badges: end -->
 
 The goal of costofliving is to ...
 
 ## Installation
 
-You can install the development version of costofliving like so:
+You can install the development version of costofliving from [GitHub](https://github.com/) with:
 
 ``` r
-# FILL THIS IN! HOW CAN PEOPLE INSTALL YOUR DEV PACKAGE?
+# install.packages("devtools")
+devtools::install_github("thuntran/costofliving")
 ```
 
 ## Example
@@ -35,7 +34,7 @@ You can install the development version of costofliving like so:
 This is a basic example which shows you how to solve a common problem:
 
 ```{r example}
-library(costofliving)
+# library(costofliving)
 ## basic example code
 ```
 
