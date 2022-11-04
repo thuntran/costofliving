@@ -58,3 +58,4 @@ In that case, don't forget to commit and push the resulting figure files, so the
 # Contributors
 
 - [Thu Tran](https://github.com/thuntran)
+- [Nina Hernandez](http://github.com/nhernandez3)
