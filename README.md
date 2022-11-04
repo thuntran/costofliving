@@ -1,3 +1,4 @@
+
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
 # costofliving
@@ -5,7 +6,7 @@
 <!-- badges: start -->
 <!-- badges: end -->
 
-The goal of costofliving is to provide information and
+The goal of costofliving is to provide functions and data sets to
 calculate the average cost of living to a median household income
 (family of 4) where 2 parents make minimum wage salaries in 2022.
 
@@ -58,3 +59,4 @@ files, so they display on GitHub and CRAN.
 # Contributors
 
 -   [Thu Tran](https://github.com/thuntran)
+-   [Nina Hernandez](http://github.com/nhernandez3)
