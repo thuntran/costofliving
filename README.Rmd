@@ -59,3 +59,5 @@ In that case, don't forget to commit and push the resulting figure files, so the
 
 - [Thu Tran](https://github.com/thuntran)
 - [Nina Hernandez](http://github.com/nhernandez3)
+- [My My Tran](http://github.com/puppehmama)
+
