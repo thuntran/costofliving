@@ -13,7 +13,6 @@ A data frame with 50 rows representing 50 states and 12 columns
 \item{stateTaxRate}{State's tax rate}
 \item{avgLocalTaxRate}{State's average local tax rate}
 \item{combinedRate}{State's combined tax rate}
-\item{federalTaxRate}{Federal tax rate, adjusted by state}
 \item{costIndex}{State's cost of living index, with the baseline set at 100}
 \item{groceryCost}{State's grocery cost index, with the baseline set at 100}
 \item{housingCost}{State's housing cost index, with the baseline set at 100}

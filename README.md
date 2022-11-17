@@ -6,9 +6,17 @@
 <!-- badges: start -->
 <!-- badges: end -->
 
+## Purpose
+
 The goal of costofliving is to provide functions and data sets to
-calculate the average cost of living to a median household income
-(family of 4) where 2 parents make minimum wage salaries in 2022.
+calculate the average cost of living to a single person making minimum
+wage salaries in different states in the US in 2022.
+
+## Target Audience
+
+This package targets any working individuals in the US who would like to
+learn more about whether they find a state livable if they earn minimum
+wage in that state.
 
 ## Installation
 
@@ -25,36 +33,36 @@ devtools::install_github("thuntran/costofliving")
 This is a basic example which shows you how to solve a common problem:
 
 ``` r
-# library(costofliving)
+library(costofliving)
 ## basic example code
 ```
 
-What is special about using `README.Rmd` instead of just `README.md`?
-You can include R chunks like so:
+Loading the `us_cost_of_living` data set:
 
 ``` r
-summary(cars)
-#>      speed           dist       
-#>  Min.   : 4.0   Min.   :  2.00  
-#>  1st Qu.:12.0   1st Qu.: 26.00  
-#>  Median :15.0   Median : 36.00  
-#>  Mean   :15.4   Mean   : 42.98  
-#>  3rd Qu.:19.0   3rd Qu.: 56.00  
-#>  Max.   :25.0   Max.   :120.00
+summary(us_cost_of_living)
+#>     state            stateTaxRate   avgLocalTaxRate    combinedRate  
+#>  Length:50          Min.   :0.000   Min.   :-0.0300   Min.   :0.000  
+#>  Class :character   1st Qu.:4.463   1st Qu.: 0.0075   1st Qu.:6.008  
+#>  Mode  :character   Median :5.975   Median : 1.1700   Median :6.955  
+#>                     Mean   :5.085   Mean   : 1.4450   Mean   :6.530  
+#>                     3rd Qu.:6.250   3rd Qu.: 2.4075   3rd Qu.:8.137  
+#>                     Max.   :7.250   Max.   : 5.1400   Max.   :9.470  
+#>  federalTaxRate   costIndex      groceryCost     housingCost   
+#>  Min.   :12     Min.   : 83.3   Min.   : 90.1   Min.   : 66.3  
+#>  1st Qu.:12     1st Qu.: 91.3   1st Qu.: 95.6   1st Qu.: 80.0  
+#>  Median :12     Median : 99.5   Median : 99.5   Median : 96.7  
+#>  Mean   :12     Mean   :104.6   Mean   :102.7   Mean   :109.6  
+#>  3rd Qu.:12     3rd Qu.:111.2   3rd Qu.:107.2   3rd Qu.:118.7  
+#>  Max.   :12     Max.   :193.3   Max.   :152.9   Max.   :315.0  
+#>  utilitiesCost    transportationCost    miscCost       minimumWage    
+#>  Min.   : 82.30   Min.   : 86.7      Min.   : 90.30   Min.   : 7.250  
+#>  1st Qu.: 90.83   1st Qu.: 94.9      1st Qu.: 96.62   1st Qu.: 7.250  
+#>  Median : 96.60   Median : 99.7      Median : 99.45   Median : 9.910  
+#>  Mean   :101.28   Mean   :102.8      Mean   :102.51   Mean   : 9.885  
+#>  3rd Qu.:104.78   3rd Qu.:108.4      3rd Qu.:108.30   3rd Qu.:12.188  
+#>  Max.   :164.20   Max.   :133.7      Max.   :126.70   Max.   :15.000
 ```
-
-You’ll still need to render `README.Rmd` regularly, to keep `README.md`
-up-to-date. `devtools::build_readme()` is handy for this. You could also
-use GitHub Actions to re-render `README.Rmd` every time you push. An
-example workflow can be found here:
-<https://github.com/r-lib/actions/tree/v1/examples>.
-
-You can also embed plots, for example:
-
-<img src="man/figures/README-pressure-1.png" width="100%" />
-
-In that case, don’t forget to commit and push the resulting figure
-files, so they display on GitHub and CRAN.
 
 # Contributors
 
