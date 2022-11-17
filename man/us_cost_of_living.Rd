@@ -10,6 +10,7 @@
 A data frame with 50 rows representing 50 states and 12 columns
 \describe{
 \item{state}{State name}
+\item{stateAbbr}{State name abbreviation}
 \item{stateTaxRate}{State's tax rate}
 \item{avgLocalTaxRate}{State's average local tax rate}
 \item{combinedRate}{State's combined tax rate}
