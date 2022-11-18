@@ -3,6 +3,7 @@
 #' There are two functions to help calculate gross salaries earning minimum wage for states
 #' gross salary is an added column to existing data set
 #'
+#' @import tidyverse
 #' @import dplyr
 #' @importFrom magrittr %>%
 #' @import purrr
