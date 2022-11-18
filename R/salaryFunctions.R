@@ -6,6 +6,7 @@
 #' @import dplyr
 #' @importFrom magrittr %>%
 #' @import purrr
+#' @import utils
 #'
 #' @param states A list of states
 #'
@@ -20,7 +21,7 @@
 #'
 
 # define global variables
-utils::globalVariables(c("minimumWage", "stateAbbr", "us_cost_of_living"))
+globalVariables(c("minimumWage", "stateAbbr", "us_cost_of_living"))
 
 # function input takes in a list of states
 grossSalaryMultiple <- function(states) {
