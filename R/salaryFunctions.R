@@ -3,6 +3,7 @@
 #' There are two functions to help calculate gross salaries earning minimum wage for states
 #' gross salary is an added column to existing data set
 #'
+#' @import tidyverse
 #' @import dplyr
 #' @importFrom magrittr %>%
 #' @import purrr
@@ -13,12 +14,12 @@
 #' @return A tibble of taxes, average living costs, minimum wage, and gross salaries earning minimum wage
 #' per state
 #'
-#' @export
+#'
 #'
 #' @examples
 #' grossSalaryMultiple(c("MA","TX","IL","AL"))
 #' grossSalaryMultiple("MA")
-#'
+#' @export
 
 # define global variables
 globalVariables(c("minimumWage", "stateAbbr", "us_cost_of_living"))
@@ -27,7 +28,7 @@ globalVariables(c("minimumWage", "stateAbbr", "us_cost_of_living"))
 grossSalaryMultiple <- function(states) {
   # each state is passed to the grossSalary function to calculate gross salary and
   # iterated using map()
-  state_rows <- map(states, grossSalary)
+  state_rows <- purrr::map(states, grossSalary)
   # separate tibbles are combined into one
   bind_rows(state_rows)
 }

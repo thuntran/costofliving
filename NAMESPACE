@@ -3,5 +3,6 @@
 export()
 import(dplyr)
 import(purrr)
+import(tidyverse)
 import(utils)
 importFrom(magrittr,"%>%")
