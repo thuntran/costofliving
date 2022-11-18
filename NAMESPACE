@@ -3,4 +3,5 @@
 export()
 import(dplyr)
 import(purrr)
+import(utils)
 importFrom(magrittr,"%>%")
