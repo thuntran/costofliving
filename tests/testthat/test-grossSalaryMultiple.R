@@ -1,4 +1,4 @@
-test_that("Testing grossSalaryMultiple", {
+test_that("Testing grossSalaryMultiple function", {
   expect <- data.frame(state = ("Massachusetts"),
                    stateAbbr=("MA"),
                    stateTaxRate=(6.25),
