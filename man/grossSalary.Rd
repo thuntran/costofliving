@@ -5,10 +5,10 @@
 \title{A function that calculates the annual gross salary of a single person earning
 minimum wage at a specific state, given a state as input.}
 \usage{
-grossSalary(state)
+grossSalary(input_state)
 }
 \arguments{
-\item{state}{A state name, abbreviated (e.g. MA)}
+\item{input_state}{A state name, abbreviated (e.g. MA)}
 }
 \value{
 A tibble of taxes, average living costs, minimum wage, and gross

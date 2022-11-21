@@ -69,22 +69,29 @@ states:
 
 ``` r
 grossSalaryMultiple("MA")
-#> # A tibble: 0 × 13
-#> # … with 13 variables: state <chr>, stateAbbr <chr>, stateTaxRate <dbl>,
-#> #   avgLocalTaxRate <dbl>, combinedRate <dbl>, costIndex <dbl>,
-#> #   groceryCost <dbl>, housingCost <dbl>, utilitiesCost <dbl>,
-#> #   transportationCost <dbl>, miscCost <dbl>, minimumWage <dbl>,
-#> #   grossSalary <dbl>
+#> # A tibble: 1 × 13
+#>   state  state…¹ state…² avgLo…³ combi…⁴ costI…⁵ groce…⁶ housi…⁷ utili…⁸ trans…⁹
+#>   <chr>  <chr>     <dbl>   <dbl>   <dbl>   <dbl>   <dbl>   <dbl>   <dbl>   <dbl>
+#> 1 Massa… MA         6.25       0    6.25     135    119.    178.    111.    111.
+#> # … with 3 more variables: miscCost <dbl>, minimumWage <dbl>,
+#> #   grossSalary <dbl>, and abbreviated variable names ¹​stateAbbr,
+#> #   ²​stateTaxRate, ³​avgLocalTaxRate, ⁴​combinedRate, ⁵​costIndex, ⁶​groceryCost,
+#> #   ⁷​housingCost, ⁸​utilitiesCost, ⁹​transportationCost
 ```
 
 ``` r
 grossSalaryMultiple(c("MA","TX","IL","AL"))
-#> # A tibble: 0 × 13
-#> # … with 13 variables: state <chr>, stateAbbr <chr>, stateTaxRate <dbl>,
-#> #   avgLocalTaxRate <dbl>, combinedRate <dbl>, costIndex <dbl>,
-#> #   groceryCost <dbl>, housingCost <dbl>, utilitiesCost <dbl>,
-#> #   transportationCost <dbl>, miscCost <dbl>, minimumWage <dbl>,
-#> #   grossSalary <dbl>
+#> # A tibble: 4 × 13
+#>   state  state…¹ state…² avgLo…³ combi…⁴ costI…⁵ groce…⁶ housi…⁷ utili…⁸ trans…⁹
+#>   <chr>  <chr>     <dbl>   <dbl>   <dbl>   <dbl>   <dbl>   <dbl>   <dbl>   <dbl>
+#> 1 Massa… MA         6.25    0       6.25   135     119.    178.    111.    111. 
+#> 2 Texas  TX         6.25    1.94    8.19    92.1    90.8    83.8   103.     94.1
+#> 3 Illin… IL         6.25    2.49    8.74    94.3    98.4    86.6    96.5   106. 
+#> 4 Alaba… AL         4       5.14    9.14    87.9    98.2    70.1   101.     92.7
+#> # … with 3 more variables: miscCost <dbl>, minimumWage <dbl>,
+#> #   grossSalary <dbl>, and abbreviated variable names ¹​stateAbbr,
+#> #   ²​stateTaxRate, ³​avgLocalTaxRate, ⁴​combinedRate, ⁵​costIndex, ⁶​groceryCost,
+#> #   ⁷​housingCost, ⁸​utilitiesCost, ⁹​transportationCost
 ```
 
 # Phase III Package Proposal
