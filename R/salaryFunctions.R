@@ -13,7 +13,7 @@ globalVariables(c("minimumWage", "stateAbbr", "us_cost_of_living"))
 #' @import dplyr
 #' @importFrom magrittr %>%
 #'
-#' @param state A state name, abbreviated (e.g. MA)
+#' @param input_state A state name, abbreviated (e.g. MA)
 #'
 #' @return A tibble of taxes, average living costs, minimum wage, and gross
 #' salaries earning minimum wage per state
@@ -25,12 +25,12 @@ globalVariables(c("minimumWage", "stateAbbr", "us_cost_of_living"))
 #' grossSalary("TX")
 #'
 
-grossSalary <- function(state) {
+grossSalary <- function(input_state) {
   # checks if user inputs a valid state abbreviation
-  if (state %in% us_cost_of_living$stateAbbr) {
+  if (input_state %in% us_cost_of_living$stateAbbr) {
     us_cost_of_living_grossSalary <- us_cost_of_living %>%
       # filter by state from user input
-      filter(stateAbbr==state) %>%
+      filter(stateAbbr==input_state) %>%
       # gross salary is calculated by working minimum wage 40 hours a week
       # and 52 weeks in a year
       mutate(grossSalary = minimumWage * 40 * 52)
@@ -38,8 +38,7 @@ grossSalary <- function(state) {
   }
   else {
     # throws an error if user does not input a valid state
-    print("Error: Please enter valid state abbreviations and check that
-          the letters are capitalized.")
+    print("Error: Please enter valid state abbreviations and check that the letters are capitalized.")
   }
 }
 
