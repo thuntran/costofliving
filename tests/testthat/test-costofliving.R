@@ -15,5 +15,5 @@ test_that("Testing grossSalaryMultiple", {
   actual <- as.data.frame(grossSalaryMultiple("MA"))
   attr(actual, "spec") <- NULL
   attr(actual, "problems") <- NULL
-  expect_identical(expect,actual)
+  expect_identical(actual, expect)
 })
