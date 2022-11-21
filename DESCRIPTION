@@ -22,7 +22,6 @@ Depends:
     R (>= 2.10)
 LazyData: true
 Imports: 
-    tidyverse,
     dplyr,
     magrittr,
     purrr,
