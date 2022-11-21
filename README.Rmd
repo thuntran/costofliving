@@ -40,9 +40,8 @@ devtools::install_github("thuntran/costofliving")
 
 This is a basic example which shows you how to solve a common problem:
 
-```{r example}
+```{r load-package}
 library(costofliving)
-## basic example code
 ```
 
 Loading the `us_cost_of_living` data set:
@@ -51,6 +50,17 @@ Loading the `us_cost_of_living` data set:
 summary(us_cost_of_living)
 ```
 
+This is an example of how to calculate the annual gross salary of a single person earning minimum wage in a specific state/a few different states:
+
+```{r example-1}
+grossSalaryMultiple("MA")
+```
+
+```{r example-2}
+grossSalaryMultiple(c("MA","TX","IL","AL"))
+```
+
+# Phase III Package Proposal 
 
 # Contributors
 
