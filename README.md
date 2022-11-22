@@ -4,6 +4,11 @@
 # costofliving
 
 <!-- badges: start -->
+
+[![Lifecycle:
+experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
+[![CRAN
+status](https://www.r-pkg.org/badges/version/myspotify)](https://CRAN.R-project.org/package=costofliving)
 <!-- badges: end -->
 
 ## Purpose
@@ -37,6 +42,29 @@ library(costofliving)
 ```
 
 Loading the `us_cost_of_living` data set:
+
+``` r
+us_cost_of_living
+#> # A tibble: 50 × 12
+#>    state state…¹ state…² avgLo…³ combi…⁴ costI…⁵ groce…⁶ housi…⁷ utili…⁸ trans…⁹
+#>    <chr> <chr>     <dbl>   <dbl>   <dbl>   <dbl>   <dbl>   <dbl>   <dbl>   <dbl>
+#>  1 Alab… AL         4       5.14    9.14    87.9    98.2    70.1   101.     92.7
+#>  2 Alas… AK         0       1.43    1.43   127.    134.    127.    155.    110. 
+#>  3 Ariz… AZ         5.6     2.77    8.37   103.    102.    108.    105.     98.8
+#>  4 Arka… AR         6.5     2.93    9.43    90.9    93.1    79.1    92.3    92.3
+#>  5 Cali… CA         7.25    1.31    8.56   142.    114.    202.    124.    132. 
+#>  6 Colo… CO         2.9     4.73    7.63   105.     98.1   116.     88.4   106. 
+#>  7 Conn… CT         6.35    0       6.35   122.    106.    135.    132.    111. 
+#>  8 Dela… DE         0       0       0      108.    114     103.     96.5   113  
+#>  9 Flor… FL         6       1.05    7.05   100.    106.     99     105.     98.8
+#> 10 Geor… GA         4       3.29    7.29    88.8    95.9    74.4    90.5    92.6
+#> # … with 40 more rows, 2 more variables: miscCost <dbl>, minimumWage <dbl>, and
+#> #   abbreviated variable names ¹​stateAbbr, ²​stateTaxRate, ³​avgLocalTaxRate,
+#> #   ⁴​combinedRate, ⁵​costIndex, ⁶​groceryCost, ⁷​housingCost, ⁸​utilitiesCost,
+#> #   ⁹​transportationCost
+```
+
+Here is a summary of the `us_cost_of_living` data set:
 
 ``` r
 summary(us_cost_of_living)
@@ -129,6 +157,6 @@ yearly update.
 
 # Contributors
 
-- [Thu Tran](https://github.com/thuntran)
-- [Nina Hernandez](http://github.com/nhernandez3)
-- [My My Tran](http://github.com/puppehmama)
+-   [Thu Tran](https://github.com/thuntran)
+-   [Nina Hernandez](http://github.com/nhernandez3)
+-   [My My Tran](http://github.com/puppehmama)

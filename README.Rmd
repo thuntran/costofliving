@@ -16,6 +16,8 @@ knitr::opts_chunk$set(
 # costofliving
 
 <!-- badges: start -->
+[![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
+[![CRAN status](https://www.r-pkg.org/badges/version/myspotify)](https://CRAN.R-project.org/package=costofliving)
 <!-- badges: end -->
 
 ## Purpose
@@ -45,6 +47,12 @@ library(costofliving)
 ```
 
 Loading the `us_cost_of_living` data set:
+
+```{r}
+us_cost_of_living
+```
+
+Here is a summary of the `us_cost_of_living` data set:
 
 ```{r us_cost_of_living}
 summary(us_cost_of_living)
