@@ -46,6 +46,12 @@ library(costofliving)
 
 Loading the `us_cost_of_living` data set:
 
+```{r}
+us_cost_of_living
+```
+
+Here is a summary of the `us_cost_of_living` data set:
+
 ```{r us_cost_of_living}
 summary(us_cost_of_living)
 ```
