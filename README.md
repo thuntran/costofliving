@@ -13,9 +13,11 @@ status](https://www.r-pkg.org/badges/version/myspotify)](https://CRAN.R-project.
 
 ## Purpose
 
-The goal of costofliving is to provide functions and data sets to
-calculate the average cost of living to a single person making minimum
-wage salaries in different states in the US in 2022.
+The goal of `costofliving` is to provide functions and data sets to
+calculate the average cost of living for a single person earning a
+minimum wage salary across different states in the United States in
+2022. This package also contains data from The World Population Review
+and the Missouri Economic Research and Information Center.
 
 ## Target Audience
 
@@ -141,8 +143,8 @@ functions:
 
 Besides, we would like to include the following data visualizations:
 
-1)  Boxplots to view the average living costs and average net salaries
-    in multiple states (that the user selects).
+1)  Scatter plots to view the average living costs and average net
+    salaries in multiple states (that the user selects).
 
 2)  An interactive USA map where the user can view the average living
     costs per state using the R leaflet package.
@@ -157,6 +159,6 @@ yearly update.
 
 # Contributors
 
--   [Thu Tran](https://github.com/thuntran)
--   [Nina Hernandez](http://github.com/nhernandez3)
--   [My My Tran](http://github.com/puppehmama)
+- [Thu Tran](https://github.com/thuntran)
+- [Nina Hernandez](http://github.com/nhernandez3)
+- [My My Tran](http://github.com/puppehmama)
