@@ -96,8 +96,39 @@ grossSalaryMultiple(c("MA","TX","IL","AL"))
 
 # Phase III Package Proposal
 
+Our R package idea will remain the same, with additional functions and
+further development for Phase III. We plan to implement two new
+functions:
+
+1)  A netSalary() function that calculates the take-home pay (in 2022)
+    for an individual after deducting federal, state, and local taxes
+    from gross salaries based on income tax brackets, per state.
+
+2)  An avgLivingCost() function that calculates the difference between
+    the net salary and average living cost per state (which includes the
+    average cost of groceries, housing, utilities, transportation, and
+    miscellaneous items). This is essentially the remaining amount of
+    money (if there is) for an individual working minimum wage to
+    financially support themselves in 2022.
+
+Besides, we would like to include the following data visualizations:
+
+1)  Boxplots to view the average living costs and average net salaries
+    in multiple states (that the user selects).
+
+2)  An interactive USA map where the user can view the average living
+    costs per state using the R leaflet package.
+
+If there is additional time, we would like to calculate the average
+living costs per state based on a median household (family of four)
+where two parents earn minimum wage.
+
+If our package is published, since we are currently using data from 2022
+(minimum wage, average living costs, etc) we would expect to make a
+yearly update.
+
 # Contributors
 
--   [Thu Tran](https://github.com/thuntran)
--   [Nina Hernandez](http://github.com/nhernandez3)
--   [My My Tran](http://github.com/puppehmama)
+- [Thu Tran](https://github.com/thuntran)
+- [Nina Hernandez](http://github.com/nhernandez3)
+- [My My Tran](http://github.com/puppehmama)
