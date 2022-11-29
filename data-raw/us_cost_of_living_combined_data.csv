@@ -1,4 +1,4 @@
-state,stateAbbr,stateTaxRate,avgLocalTaxRate,combinedRate,costIndex,groceryCost,housingCost,utilitiesCost,transportationCost,miscCost,minimumWage
+state,state_abbr,state_tax_rate,avg_local_tax_rate,combined_tax_rate,cost_index,grocery_cost_index,housing_cost_index,utilities_cost_index,transportation_cost_index,misc_cost_index,minimum_wage
 Alabama,AL,4,5.14,9.14,87.9,98.2,70.1,100.7,92.7,94.1,7.25
 Alaska,AK,0,1.43,1.43,127.1,134.5,126.9,154.8,109.9,113.7,10.34
 Arizona,AZ,5.6,2.77,8.37,103.2,101.5,107.7,104.8,98.8,99.7,12.8
