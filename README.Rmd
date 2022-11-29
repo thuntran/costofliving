@@ -61,20 +61,20 @@ summary(us_cost_of_living)
 This is an example of how to calculate the annual gross salary of a single person earning minimum wage in a specific state/a few different states:
 
 ```{r example-1}
-grossSalaryMultiple("MA")
+gross_salary_multiple("MA")
 ```
 
 ```{r example-2}
-grossSalaryMultiple(c("MA","TX","IL","AL"))
+gross_salary_multiple(c("MA","TX","IL","AL"))
 ```
 
 # Phase III Package Proposal 
 
 Our R package idea will remain the same, with additional functions and further development for Phase III. We plan to implement two new functions:
 
-  (1) A netSalary() function that calculates the take-home pay (in 2022) for an individual after deducting federal, state, and local taxes from gross salaries based on income tax brackets, per state. 
+  (1) A net_salary() function that calculates the take-home pay (in 2022) for an individual after deducting federal, state, and local taxes from gross salaries based on income tax brackets, per state. 
   
-  (2) An avgLivingCost() function that calculates the difference between the net salary and average living cost per state (which includes the average cost of groceries, housing, utilities, transportation, and miscellaneous items). This is essentially the remaining amount of money (if there is) for an individual working minimum wage to financially support themselves in 2022. 
+  (2) An avg_living_cost() function that calculates the difference between the net salary and average living cost per state (which includes the average cost of groceries, housing, utilities, transportation, and miscellaneous items). This is essentially the remaining amount of money (if there is) for an individual working minimum wage to financially support themselves in 2022. 
   
   
 Besides, we would like to include the following data visualizations:
