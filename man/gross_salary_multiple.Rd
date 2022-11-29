@@ -2,8 +2,7 @@
 % Please edit documentation in R/salary_functions.R
 \name{gross_salary_multiple}
 \alias{gross_salary_multiple}
-\title{A function that calculates the annual gross salary of a single person earning
-minimum wage at one or more states, given a vector of states as input.}
+\title{Function to calculate gross salaries across multiple states}
 \usage{
 gross_salary_multiple(states)
 }

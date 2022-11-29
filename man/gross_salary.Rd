@@ -2,8 +2,7 @@
 % Please edit documentation in R/salary_functions.R
 \name{gross_salary}
 \alias{gross_salary}
-\title{A function that calculates the annual gross salary of a single person earning
-minimum wage at a specific state, given a state as input.}
+\title{Helper function to calculate gross salary of one state}
 \usage{
 gross_salary(input_state)
 }
@@ -15,6 +14,8 @@ A tibble of taxes, average living costs, minimum wage, and gross
 salaries earning minimum wage per state
 }
 \description{
+A function that calculates the annual gross salary of a single person earning
+minimum wage at a specific state, given a state as input.
 \code{gross_salary} is an added column to the existing \code{us_cost_of_living} data set.
 This serves as a helper function to the following \code{gross_salary_multiple()}
 function.

@@ -1,11 +1,12 @@
 # Define global variables
 #'
 #' @import utils
-globalVariables(c("minimumWage", "stateAbbr", "us_cost_of_living"))
+globalVariables(c("minimum_wage", "state_abbr", "us_cost_of_living"))
 
+#' Helper function to calculate gross salary of one state
+#'
 #' A function that calculates the annual gross salary of a single person earning
 #' minimum wage at a specific state, given a state as input.
-#'
 #' `gross_salary` is an added column to the existing `us_cost_of_living` data set.
 #' This serves as a helper function to the following `gross_salary_multiple()`
 #' function.
@@ -43,6 +44,8 @@ gross_salary <- function(input_state) {
 }
 
 
+#' Function to calculate gross salaries across multiple states
+#'
 #' A function that calculates the annual gross salary of a single person earning
 #' minimum wage at one or more states, given a vector of states as input.
 #'
