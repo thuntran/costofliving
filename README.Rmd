@@ -55,7 +55,7 @@ us_cost_of_living
 Loading the `taxable_income` data set:
 
 ```{r}
-taxable_income
+us_taxable_income
 ```
 
 Here is a summary of the `us_cost_of_living` data set:

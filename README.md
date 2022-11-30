@@ -70,7 +70,7 @@ us_cost_of_living
 Loading the `taxable_income` data set:
 
 ``` r
-taxable_income
+us_taxable_income
 #> # A tibble: 7 × 4
 #>   tax_rate min_income    max_income tax_info                                   
 #>      <dbl>      <dbl>         <dbl> <chr>                                      

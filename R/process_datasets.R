@@ -28,12 +28,12 @@
 "us_cost_of_living"
 
 
-#' US federal income tax data set
+#' US federal income tax rates data set
 #'
 #' A data set that contains information about US tax brackets and federal income
 #' tax rates for a single filer.
 #'
-#' @format ## `taxable_income`
+#' @format ## `us_taxable_income`
 #' A data frame with 7 rows representing 7 tax brackets and 4 columns
 #' \describe{
 #' \item{tax_rate}{Federal tax rate}
@@ -46,5 +46,5 @@
 #'   <https://www.nerdwallet.com/article/taxes/federal-income-tax-brackets>
 #'
 #' @docType data
-"taxable_income"
+"us_taxable_income"
 
