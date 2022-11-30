@@ -3,7 +3,7 @@
 \docType{data}
 \name{taxable_income}
 \alias{taxable_income}
-\title{US tax brackets and federal income tax rates for a single filer}
+\title{US federal income tax data set}
 \format{
 \subsection{\code{taxable_income}}{
 
@@ -18,12 +18,13 @@ A data frame with 7 rows representing 7 tax brackets and 4 columns
 }
 \source{
 Download from
-\url{https://www.nerdwallet.com/article/taxes/federal-income-tax-brackets},
+\url{https://www.nerdwallet.com/article/taxes/federal-income-tax-brackets}
 }
 \usage{
 taxable_income
 }
 \description{
-A data set that contains information about tax brackets based on income and federal income tax rates
+A data set that contains information about US tax brackets and federal income
+tax rates for a single filer.
 }
 \keyword{datasets}

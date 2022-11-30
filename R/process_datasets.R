@@ -26,3 +26,25 @@
 #'
 #' @docType data
 "us_cost_of_living"
+
+
+#' US federal income tax data set
+#'
+#' A data set that contains information about US tax brackets and federal income
+#' tax rates for a single filer.
+#'
+#' @format ## `taxable_income`
+#' A data frame with 7 rows representing 7 tax brackets and 4 columns
+#' \describe{
+#' \item{tax_rate}{Federal tax rate}
+#' \item{min_income}{Minimum income threshold for a tax rate}
+#' \item{max_income}{Maximum income threshold for a tax rate}
+#' \item{tax_info}{Additional information regarding the tax owed for each bracket}
+#' }
+#'
+#' @source Download from
+#'   <https://www.nerdwallet.com/article/taxes/federal-income-tax-brackets>
+#'
+#' @docType data
+"taxable_income"
+
