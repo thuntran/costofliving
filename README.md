@@ -67,6 +67,22 @@ us_cost_of_living
 #> #   ⁹​transportation_cost_index
 ```
 
+Loading the `taxable_income` data set:
+
+``` r
+taxable_income
+#> # A tibble: 7 × 4
+#>   tax_rate min_income    max_income tax_info                                   
+#>      <dbl>      <dbl>         <dbl> <chr>                                      
+#> 1     0.1           0         10275 10% of taxable income                      
+#> 2     0.12      10276         41775 1027.50 plus 12% of the amount over 10275  
+#> 3     0.22      41776         89075 4807.50 plus 22% of the amount over 41775  
+#> 4     0.24      89076        170050 15213.50 plus 24% of the amount over 89075 
+#> 5     0.32     170051        215950 3464750 plus 32% of the amount over 170050 
+#> 6     0.35     215951        539900 49335.50 plus 35% of the amount over 215950
+#> 7     0.37     539901 9999999999999 162718 plus 37% of the amount over 539900
+```
+
 Here is a summary of the `us_cost_of_living` data set:
 
 ``` r

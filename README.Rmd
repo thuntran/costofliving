@@ -52,6 +52,12 @@ Loading the `us_cost_of_living` data set:
 us_cost_of_living
 ```
 
+Loading the `taxable_income` data set:
+
+```{r}
+taxable_income
+```
+
 Here is a summary of the `us_cost_of_living` data set:
 
 ```{r us_cost_of_living}
