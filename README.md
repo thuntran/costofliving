@@ -72,15 +72,15 @@ Loading the `taxable_income` data set:
 ``` r
 us_taxable_income
 #> # A tibble: 7 × 4
-#>   tax_rate min_income    max_income tax_info                                   
-#>      <dbl>      <dbl>         <dbl> <chr>                                      
-#> 1     0.1           0         10275 10% of taxable income                      
-#> 2     0.12      10276         41775 1027.50 plus 12% of the amount over 10275  
-#> 3     0.22      41776         89075 4807.50 plus 22% of the amount over 41775  
-#> 4     0.24      89076        170050 15213.50 plus 24% of the amount over 89075 
-#> 5     0.32     170051        215950 3464750 plus 32% of the amount over 170050 
-#> 6     0.35     215951        539900 49335.50 plus 35% of the amount over 215950
-#> 7     0.37     539901 9999999999999 162718 plus 37% of the amount over 539900
+#>   tax_rate min_income max_income tax_info                                   
+#>      <dbl>      <dbl>      <dbl> <chr>                                      
+#> 1     0.1           0    1.03e 4 10% of taxable income                      
+#> 2     0.12      10276    4.18e 4 1027.50 plus 12% of the amount over 10275  
+#> 3     0.22      41776    8.91e 4 4807.50 plus 22% of the amount over 41775  
+#> 4     0.24      89076    1.70e 5 15213.50 plus 24% of the amount over 89075 
+#> 5     0.32     170051    2.16e 5 34647.50 plus 32% of the amount over 170050
+#> 6     0.35     215951    5.40e 5 49335.50 plus 35% of the amount over 215950
+#> 7     0.37     539901    1   e13 162718 plus 37% of the amount over 539900
 ```
 
 Here is a summary of the `us_cost_of_living` data set:
@@ -117,6 +117,23 @@ summary(us_cost_of_living)
 #>  Max.   :15.000
 ```
 
+`gross_salary()` is used as a helper function that calculates the annual
+gross salary of a single person earning minimum wage. It is mainly to
+aid the functionality of other functions:
+
+``` r
+gross_salary("CA")
+#> # A tibble: 1 × 13
+#>   state  state…¹ state…² avg_l…³ combi…⁴ cost_…⁵ groce…⁶ housi…⁷ utili…⁸ trans…⁹
+#>   <chr>  <chr>     <dbl>   <dbl>   <dbl>   <dbl>   <dbl>   <dbl>   <dbl>   <dbl>
+#> 1 Calif… CA         7.25    1.31    8.56    142.    114.    202.    124.    132.
+#> # … with 3 more variables: misc_cost_index <dbl>, minimum_wage <dbl>,
+#> #   gross_salary <dbl>, and abbreviated variable names ¹​state_abbr,
+#> #   ²​state_tax_rate, ³​avg_local_tax_rate, ⁴​combined_tax_rate, ⁵​cost_index,
+#> #   ⁶​grocery_cost_index, ⁷​housing_cost_index, ⁸​utilities_cost_index,
+#> #   ⁹​transportation_cost_index
+```
+
 This is an example of how to calculate the annual gross salary of a
 single person earning minimum wage in a specific state/a few different
 states:
@@ -148,6 +165,22 @@ gross_salary_multiple(c("MA","TX","IL","AL"))
 #> #   ²​state_tax_rate, ³​avg_local_tax_rate, ⁴​combined_tax_rate, ⁵​cost_index,
 #> #   ⁶​grocery_cost_index, ⁷​housing_cost_index, ⁸​utilities_cost_index,
 #> #   ⁹​transportation_cost_index
+```
+
+This is an example of how to calculate the amount of federal tax owed by
+a single person earning minimum wage in a specific state:
+
+``` r
+federal_tax_owed("TN")
+#> # A tibble: 1 × 14
+#>   state  state…¹ state…² avg_l…³ combi…⁴ cost_…⁵ groce…⁶ housi…⁷ utili…⁸ trans…⁹
+#>   <chr>  <chr>     <dbl>   <dbl>   <dbl>   <dbl>   <dbl>   <dbl>   <dbl>   <dbl>
+#> 1 Tenne… TN            7    2.47    9.47      89    94.7    79.3    92.5    88.8
+#> # … with 4 more variables: misc_cost_index <dbl>, minimum_wage <dbl>,
+#> #   gross_salary <dbl>, federal_tax_owed <dbl>, and abbreviated variable names
+#> #   ¹​state_abbr, ²​state_tax_rate, ³​avg_local_tax_rate, ⁴​combined_tax_rate,
+#> #   ⁵​cost_index, ⁶​grocery_cost_index, ⁷​housing_cost_index,
+#> #   ⁸​utilities_cost_index, ⁹​transportation_cost_index
 ```
 
 # Phase III Package Proposal

@@ -63,15 +63,25 @@ Here is a summary of the `us_cost_of_living` data set:
 ```{r us_cost_of_living}
 summary(us_cost_of_living)
 ```
+`gross_salary()` is used as a helper function that calculates the annual gross salary of a single person earning minimum wage. It is mainly to aid the functionality of other functions:
+
+```{r example-1}
+gross_salary("CA")
+```
 
 This is an example of how to calculate the annual gross salary of a single person earning minimum wage in a specific state/a few different states:
 
-```{r example-1}
+```{r example-2}
 gross_salary_multiple("MA")
 ```
 
-```{r example-2}
+```{r example-3}
 gross_salary_multiple(c("MA","TX","IL","AL"))
+```
+This is an example of how to calculate the amount of federal tax owed by a single person earning minimum wage in a specific state:
+
+```{r example-4}
+federal_tax_owed("TN")
 ```
 
 # Phase III Package Proposal 
