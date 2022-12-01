@@ -9,7 +9,7 @@
 
 A data frame with 7 rows representing 7 tax brackets and 4 columns
 \describe{
-\item{fed_tax_rate}{Federal tax rate}
+\item{fed_tax_rate}{Federal tax rate, in percent}
 \item{min_income}{Minimum income threshold for a tax rate}
 \item{max_income}{Maximum income threshold for a tax rate}
 \item{fed_tax_info}{Additional information regarding the tax owed for each bracket}
