@@ -17,8 +17,6 @@ A data frame with 50 rows representing 50 states and 3 columns
 }
 \source{
 Download from
-\url{https://worldpopulationreview.com/state-rankings/cost-of-living-index-by-state},
-\url{https://worldpopulationreview.com/state-rankings/cost-of-living-index-by-state}, and
 \url{https://www.laborlawcenter.com/state-minimum-wage-rates}.
 }
 \usage{

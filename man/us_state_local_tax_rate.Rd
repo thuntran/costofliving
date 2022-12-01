@@ -11,17 +11,15 @@ A data frame with 50 rows representing 50 states and 5 columns
 \describe{
 \item{state}{State name}
 \item{state_abbr}{State name abbreviation}
-\item{state_tax_rate}{State's tax rate}
-\item{avg_local_tax_rate}{State's average local tax rate}
-\item{combined_tax_rate}{State's combined tax rate}
+\item{state_tax_rate}{State's tax rate, in percent}
+\item{avg_local_tax_rate}{State's average local tax rate, in percent}
+\item{combined_tax_rate}{State's combined state and local tax rate, in percent}
 }
 }
 }
 \source{
 Download from
-\url{https://worldpopulationreview.com/state-rankings/cost-of-living-index-by-state},
-\url{https://worldpopulationreview.com/state-rankings/cost-of-living-index-by-state}, and
-\url{https://www.laborlawcenter.com/state-minimum-wage-rates}.
+\url{https://worldpopulationreview.com/state-rankings/sales-tax-by-state}.
 }
 \usage{
 us_state_local_tax_rate

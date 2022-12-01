@@ -47,22 +47,22 @@ Loading the `us_cost_of_living` data set:
 
 ``` r
 us_cost_of_living
-#> # A tibble: 50 × 8
-#>    state       state_abbr cost_index grocery_c…¹ housi…² utili…³ trans…⁴ misc_…⁵
-#>    <chr>       <chr>           <dbl>       <dbl>   <dbl>   <dbl>   <dbl>   <dbl>
-#>  1 Alabama     AL               87.9        98.2    70.1   101.     92.7    94.1
-#>  2 Alaska      AK              127.        134.    127.    155.    110.    114. 
-#>  3 Arizona     AZ              103.        102.    108.    105.     98.8    99.7
-#>  4 Arkansas    AR               90.9        93.1    79.1    92.3    92.3    97.4
-#>  5 California  CA              142.        114.    202.    124.    132.    111. 
-#>  6 Colorado    CO              105.         98.1   116.     88.4   106.    107. 
-#>  7 Connecticut CT              122.        106.    135.    132.    111.    114. 
-#>  8 Delaware    DE              108.        114     103.     96.5   113     114. 
-#>  9 Florida     FL              100.        106.     99     105.     98.8    98.4
-#> 10 Georgia     GA               88.8        95.9    74.4    90.5    92.6    96.6
-#> # … with 40 more rows, and abbreviated variable names ¹​grocery_cost_index,
-#> #   ²​housing_cost_index, ³​utilities_cost_index, ⁴​transportation_cost_index,
-#> #   ⁵​misc_cost_index
+#> # A tibble: 50 × 9
+#>    state       state_a…¹ groce…² medic…³ housi…⁴ trans…⁵ civic…⁶ other…⁷ total…⁸
+#>    <chr>       <chr>       <dbl>   <dbl>   <dbl>   <dbl>   <dbl>   <dbl>   <dbl>
+#>  1 Alabama     AL           3351    2733    8096    5509    2503    4508   26700
+#>  2 Alaska      AK           3999    2382   11162    4938    2581    4748   29810
+#>  3 Arizona     AZ           3999    2607   10988    4938    2581    4748   29861
+#>  4 Arkansas    AR           3351    2521    7402    5509    2503    4508   25794
+#>  5 California  CA           3999    2288   17651    4938    2581    4748   36205
+#>  6 Colorado    CO           3999    2729   13357    4938    2581    4748   32352
+#>  7 Connecticut CT           3891    2798   12498    4244    3207    5275   31913
+#>  8 Delaware    DE           3351    2863   10845    5509    2503    4508   29579
+#>  9 Florida     FL           3351    2871   11991    5509    2503    4508   30733
+#> 10 Georgia     GA           3351    2583   10882    5509    2503    4508   29336
+#> # … with 40 more rows, and abbreviated variable names ¹​state_abbr,
+#> #   ²​grocery_cost, ³​medical_cost, ⁴​housing_cost, ⁵​transportation_cost,
+#> #   ⁶​civic_cost, ⁷​other_cost, ⁸​total_avg_cost
 ```
 
 Loading the `us_minimum_wage` data set:
@@ -92,13 +92,13 @@ us_federal_tax_rate
 #> # A tibble: 7 × 4
 #>   fed_tax_rate min_income max_income fed_tax_info                               
 #>          <dbl>      <dbl>      <dbl> <chr>                                      
-#> 1         0.1           0    1.03e 4 10% of taxable income                      
-#> 2         0.12      10276    4.18e 4 1027.50 plus 12% of the amount over 10275  
-#> 3         0.22      41776    8.91e 4 4807.50 plus 22% of the amount over 41775  
-#> 4         0.24      89076    1.70e 5 15213.50 plus 24% of the amount over 89075 
-#> 5         0.32     170051    2.16e 5 34647.50 plus 32% of the amount over 170050
-#> 6         0.35     215951    5.40e 5 49335.50 plus 35% of the amount over 215950
-#> 7         0.37     539901    1   e13 162718 plus 37% of the amount over 539900
+#> 1           10          0    1.03e 4 10% of taxable income                      
+#> 2           12      10276    4.18e 4 1027.50 plus 12% of the amount over 10275  
+#> 3           22      41776    8.91e 4 4807.50 plus 22% of the amount over 41775  
+#> 4           24      89076    1.70e 5 15213.50 plus 24% of the amount over 89075 
+#> 5           32     170051    2.16e 5 34647.50 plus 32% of the amount over 170050
+#> 6           35     215951    5.40e 5 49335.50 plus 35% of the amount over 215950
+#> 7           37     539901    1   e13 162718 plus 37% of the amount over 539900
 ```
 
 Loading the `us_state_local_tax_rate` data set:
