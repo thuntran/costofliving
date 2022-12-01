@@ -7,13 +7,10 @@
 \format{
 \subsection{\code{us_cost_of_living}}{
 
-A data frame with 50 rows representing 50 states and 12 columns
+A data frame with 50 rows representing 50 states and 9 columns
 \describe{
 \item{state}{State name}
 \item{state_abbr}{State name abbreviation}
-\item{state_tax_rate}{State's tax rate}
-\item{avg_local_tax_rate}{State's average local tax rate}
-\item{combined_tax_rate}{State's combined tax rate}
 \item{cost_index}{State's cost of living index, with the baseline set at 100}
 \item{grocery_cost_index}{State's grocery cost index, with the baseline set at 100}
 \item{housing_cost_index}{State's housing cost index, with the baseline set at 100}

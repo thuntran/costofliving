@@ -76,7 +76,7 @@ gross_salary_multiple <- function(states) {
 # Define global variables
 #'
 #' @import utils
-globalVariables(c("min_income", "max_income", "us_taxable_income"))
+globalVariables(c("min_income", "max_income", "us_federal_tax_rate"))
 
 #' Function to calculate tax owed by an individual based on their gross income
 #'
@@ -103,25 +103,25 @@ federal_tax_owed <- function(input_state) {
   state_row <- gross_salary(input_state)
   state_gross_salary <- state_row$gross_salary
   if (!is.null(dim(state_row))) {
-    if (state_gross_salary >= us_taxable_income$min_income[1] & state_gross_salary <= us_taxable_income$max_income[1]) {
+    if (state_gross_salary >= us_federal_tax_rate$min_income[1] & state_gross_salary <= us_federal_tax_rate$max_income[1]) {
       state_row <- state_row %>%
         mutate(federal_tax_owed = state_gross_salary * 0.10)
-    } else if (state_gross_salary >= us_taxable_income$min_income[2] & state_gross_salary <= us_taxable_income$max_income[2]) {
+    } else if (state_gross_salary >= us_federal_tax_rate$min_income[2] & state_gross_salary <= us_federal_tax_rate$max_income[2]) {
       state_row <- state_row %>%
         mutate(federal_tax_owed = (state_gross_salary - 10275) * 0.12 + 1027.50)
-    } else if (state_gross_salary >= us_taxable_income$min_income[3] & state_gross_salary <= us_taxable_income$max_income[3]) {
+    } else if (state_gross_salary >= us_federal_tax_rate$min_income[3] & state_gross_salary <= us_federal_tax_rate$max_income[3]) {
       state_row <- state_row %>%
         mutate(federal_tax_owed = (state_gross_salary - 41775) * 0.22 + 4807.50)
-    } else if (state_gross_salary >= us_taxable_income$min_income[4] & state_gross_salary <= us_taxable_income$max_income[4]) {
+    } else if (state_gross_salary >= us_federal_tax_rate$min_income[4] & state_gross_salary <= us_federal_tax_rate$max_income[4]) {
       state_row <- state_row %>%
         mutate(federal_tax_owed = (state_gross_salary - 89075) * 0.24 + 15213.50)
-    } else if (state_gross_salary >= us_taxable_income$min_income[5] & state_gross_salary <= us_taxable_income$max_income[5]) {
+    } else if (state_gross_salary >= us_federal_tax_rate$min_income[5] & state_gross_salary <= us_federal_tax_rate$max_income[5]) {
       state_row <- state_row %>%
         mutate(federal_tax_owed = (state_gross_salary - 170050) * 0.32 + 34647.50)
-    } else if (state_gross_salary >= us_taxable_income$min_income[6] & state_gross_salary <= us_taxable_income$max_income[6]) {
+    } else if (state_gross_salary >= us_federal_tax_rate$min_income[6] & state_gross_salary <= us_federal_tax_rate$max_income[6]) {
       state_row <- state_row %>%
         mutate(federal_tax_owed = (state_gross_salary - 215950) * 0.35 + 49335.50)
-    } else { # state_gross_salary >= us_taxable_income$min_income[7]
+    } else { # state_gross_salary >= us_federal_tax_rate$min_income[7]
       state_row <- state_row %>%
         mutate(federal_tax_owed = (state_gross_salary - 539900) * 0.37 + 162718)
     }

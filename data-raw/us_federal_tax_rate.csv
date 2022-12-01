@@ -1,8 +1,8 @@
-tax_rate,min_income,max_income,tax_info
+fed_tax_rate,min_income,max_income,fed_tax_info
 0.1,0,10275,10% of taxable income
 0.12,10276,41775,1027.50 plus 12% of the amount over 10275
 0.22,41776,89075,4807.50 plus 22% of the amount over 41775
 0.24,89076,170050,15213.50 plus 24% of the amount over 89075
 0.32,170051,215950,34647.50 plus 32% of the amount over 170050
 0.35,215951,539900,49335.50 plus 35% of the amount over 215950
-0.37,539901,1E+13,162718 plus 37% of the amount over 539900
+0.37,539901,1.00E+13,162718 plus 37% of the amount over 539900
