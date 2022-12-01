@@ -2,7 +2,7 @@
 % Please edit documentation in R/salary_functions.R
 \name{federal_tax_owed}
 \alias{federal_tax_owed}
-\title{Function to calculate tax owed by an individual based on their gross income}
+\title{Function to calculate the federal tax owed by an individual based on their gross income}
 \usage{
 federal_tax_owed(input_state)
 }
@@ -10,12 +10,12 @@ federal_tax_owed(input_state)
 \item{input_state}{A state name, abbreviated (e.g. MA)}
 }
 \value{
-A tibble of taxes, average living costs, minimum wage, and gross
-salaries earning minimum wage per state
+A tibble of the state, minimum wage, gross salary calculation
+earning minimum wage, and the federal tax owed based on income
 }
 \description{
 A function that calculates the amount of federal tax owed by an individual earning
-minimum wage at a specific state, given a state as input.
+minimum wage based on federal income tax brackets, given a state as input.
 }
 \examples{
 federal_tax_owed("TX")
