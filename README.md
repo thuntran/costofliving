@@ -47,22 +47,42 @@ Loading the `us_cost_of_living` data set:
 
 ``` r
 us_cost_of_living
-#> # A tibble: 50 × 9
-#>    state       state_a…¹ cost_…² groce…³ housi…⁴ utili…⁵ trans…⁶ misc_…⁷ minim…⁸
-#>    <chr>       <chr>       <dbl>   <dbl>   <dbl>   <dbl>   <dbl>   <dbl>   <dbl>
-#>  1 Alabama     AL           87.9    98.2    70.1   101.     92.7    94.1    7.25
-#>  2 Alaska      AK          127.    134.    127.    155.    110.    114.    10.3 
-#>  3 Arizona     AZ          103.    102.    108.    105.     98.8    99.7   12.8 
-#>  4 Arkansas    AR           90.9    93.1    79.1    92.3    92.3    97.4   11   
-#>  5 California  CA          142.    114.    202.    124.    132.    111.    15   
-#>  6 Colorado    CO          105.     98.1   116.     88.4   106.    107.    12.6 
-#>  7 Connecticut CT          122.    106.    135.    132.    111.    114.    14   
-#>  8 Delaware    DE          108.    114     103.     96.5   113     114.    10.5 
-#>  9 Florida     FL          100.    106.     99     105.     98.8    98.4   10   
-#> 10 Georgia     GA           88.8    95.9    74.4    90.5    92.6    96.6    7.25
-#> # … with 40 more rows, and abbreviated variable names ¹​state_abbr, ²​cost_index,
-#> #   ³​grocery_cost_index, ⁴​housing_cost_index, ⁵​utilities_cost_index,
-#> #   ⁶​transportation_cost_index, ⁷​misc_cost_index, ⁸​minimum_wage
+#> # A tibble: 50 × 8
+#>    state       state_abbr cost_index grocery_c…¹ housi…² utili…³ trans…⁴ misc_…⁵
+#>    <chr>       <chr>           <dbl>       <dbl>   <dbl>   <dbl>   <dbl>   <dbl>
+#>  1 Alabama     AL               87.9        98.2    70.1   101.     92.7    94.1
+#>  2 Alaska      AK              127.        134.    127.    155.    110.    114. 
+#>  3 Arizona     AZ              103.        102.    108.    105.     98.8    99.7
+#>  4 Arkansas    AR               90.9        93.1    79.1    92.3    92.3    97.4
+#>  5 California  CA              142.        114.    202.    124.    132.    111. 
+#>  6 Colorado    CO              105.         98.1   116.     88.4   106.    107. 
+#>  7 Connecticut CT              122.        106.    135.    132.    111.    114. 
+#>  8 Delaware    DE              108.        114     103.     96.5   113     114. 
+#>  9 Florida     FL              100.        106.     99     105.     98.8    98.4
+#> 10 Georgia     GA               88.8        95.9    74.4    90.5    92.6    96.6
+#> # … with 40 more rows, and abbreviated variable names ¹​grocery_cost_index,
+#> #   ²​housing_cost_index, ³​utilities_cost_index, ⁴​transportation_cost_index,
+#> #   ⁵​misc_cost_index
+```
+
+Loading the `us_minimum_wage` data set:
+
+``` r
+us_minimum_wage
+#> # A tibble: 50 × 3
+#>    state       state_abbr minimum_wage
+#>    <chr>       <chr>             <dbl>
+#>  1 Alabama     AL                 7.25
+#>  2 Alaska      AK                10.3 
+#>  3 Arizona     AZ                12.8 
+#>  4 Arkansas    AR                11   
+#>  5 California  CA                15   
+#>  6 Colorado    CO                12.6 
+#>  7 Connecticut CT                14   
+#>  8 Delaware    DE                10.5 
+#>  9 Florida     FL                10   
+#> 10 Georgia     GA                 7.25
+#> # … with 40 more rows
 ```
 
 Loading the `us_federal_tax_rate` data set:
@@ -107,13 +127,10 @@ aid the functionality of other functions:
 
 ``` r
 gross_salary("CA")
-#> # A tibble: 1 × 10
-#>   state  state…¹ cost_…² groce…³ housi…⁴ utili…⁵ trans…⁶ misc_…⁷ minim…⁸ gross…⁹
-#>   <chr>  <chr>     <dbl>   <dbl>   <dbl>   <dbl>   <dbl>   <dbl>   <dbl>   <dbl>
-#> 1 Calif… CA         142.    114.    202.    124.    132.    111.      15   31200
-#> # … with abbreviated variable names ¹​state_abbr, ²​cost_index,
-#> #   ³​grocery_cost_index, ⁴​housing_cost_index, ⁵​utilities_cost_index,
-#> #   ⁶​transportation_cost_index, ⁷​misc_cost_index, ⁸​minimum_wage, ⁹​gross_salary
+#> # A tibble: 1 × 4
+#>   state      state_abbr minimum_wage gross_salary
+#>   <chr>      <chr>             <dbl>        <dbl>
+#> 1 California CA                   15        31200
 ```
 
 This is an example of how to calculate the annual gross salary of a
@@ -122,27 +139,21 @@ states:
 
 ``` r
 gross_salary_multiple("MA")
-#> # A tibble: 1 × 10
-#>   state  state…¹ cost_…² groce…³ housi…⁴ utili…⁵ trans…⁶ misc_…⁷ minim…⁸ gross…⁹
-#>   <chr>  <chr>     <dbl>   <dbl>   <dbl>   <dbl>   <dbl>   <dbl>   <dbl>   <dbl>
-#> 1 Massa… MA          135    119.    178.    111.    111.    116.    14.2   29640
-#> # … with abbreviated variable names ¹​state_abbr, ²​cost_index,
-#> #   ³​grocery_cost_index, ⁴​housing_cost_index, ⁵​utilities_cost_index,
-#> #   ⁶​transportation_cost_index, ⁷​misc_cost_index, ⁸​minimum_wage, ⁹​gross_salary
+#> # A tibble: 1 × 4
+#>   state         state_abbr minimum_wage gross_salary
+#>   <chr>         <chr>             <dbl>        <dbl>
+#> 1 Massachusetts MA                 14.2        29640
 ```
 
 ``` r
 gross_salary_multiple(c("MA","TX","IL","AL"))
-#> # A tibble: 4 × 10
-#>   state  state…¹ cost_…² groce…³ housi…⁴ utili…⁵ trans…⁶ misc_…⁷ minim…⁸ gross…⁹
-#>   <chr>  <chr>     <dbl>   <dbl>   <dbl>   <dbl>   <dbl>   <dbl>   <dbl>   <dbl>
-#> 1 Massa… MA        135     119.    178.    111.    111.    116.    14.2    29640
-#> 2 Texas  TX         92.1    90.8    83.8   103.     94.1    97      7.25   15080
-#> 3 Illin… IL         94.3    98.4    86.6    96.5   106.     96.7   12      24960
-#> 4 Alaba… AL         87.9    98.2    70.1   101.     92.7    94.1    7.25   15080
-#> # … with abbreviated variable names ¹​state_abbr, ²​cost_index,
-#> #   ³​grocery_cost_index, ⁴​housing_cost_index, ⁵​utilities_cost_index,
-#> #   ⁶​transportation_cost_index, ⁷​misc_cost_index, ⁸​minimum_wage, ⁹​gross_salary
+#> # A tibble: 4 × 4
+#>   state         state_abbr minimum_wage gross_salary
+#>   <chr>         <chr>             <dbl>        <dbl>
+#> 1 Massachusetts MA                14.2         29640
+#> 2 Texas         TX                 7.25        15080
+#> 3 Illinois      IL                12           24960
+#> 4 Alabama       AL                 7.25        15080
 ```
 
 This is an example of how to calculate the amount of federal tax owed by
@@ -150,14 +161,10 @@ a single person earning minimum wage in a specific state:
 
 ``` r
 federal_tax_owed("TN")
-#> # A tibble: 1 × 11
-#>   state  state…¹ cost_…² groce…³ housi…⁴ utili…⁵ trans…⁶ misc_…⁷ minim…⁸ gross…⁹
-#>   <chr>  <chr>     <dbl>   <dbl>   <dbl>   <dbl>   <dbl>   <dbl>   <dbl>   <dbl>
-#> 1 Tenne… TN           89    94.7    79.3    92.5    88.8    92.9    7.25   15080
-#> # … with 1 more variable: federal_tax_owed <dbl>, and abbreviated variable
-#> #   names ¹​state_abbr, ²​cost_index, ³​grocery_cost_index, ⁴​housing_cost_index,
-#> #   ⁵​utilities_cost_index, ⁶​transportation_cost_index, ⁷​misc_cost_index,
-#> #   ⁸​minimum_wage, ⁹​gross_salary
+#> # A tibble: 1 × 5
+#>   state     state_abbr minimum_wage gross_salary federal_tax_owed
+#>   <chr>     <chr>             <dbl>        <dbl>            <dbl>
+#> 1 Tennessee TN                 7.25        15080            1604.
 ```
 
 # Phase III Package Proposal

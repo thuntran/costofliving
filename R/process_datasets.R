@@ -67,3 +67,23 @@
 #' @docType data
 "us_state_local_tax_rate"
 
+#' US minimum wage data set
+#'
+#' A data set that contains information related to minimum wage rates in the US.
+#'
+#' @format ## `us_minimum_wage`
+#' A data frame with 50 rows representing 50 states and 3 columns
+#' \describe{
+#' \item{state}{State name}
+#' \item{state_abbr}{State name abbreviation}
+#' \item{minimum_wage}{State's minimum wage (hourly rate)}
+#' }
+#'
+#' @source Download from
+#'   <https://worldpopulationreview.com/state-rankings/cost-of-living-index-by-state>,
+#'   <https://worldpopulationreview.com/state-rankings/cost-of-living-index-by-state>, and
+#'   <https://www.laborlawcenter.com/state-minimum-wage-rates>.
+#'
+#' @docType data
+"us_minimum_wage"
+
