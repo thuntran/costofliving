@@ -52,26 +52,37 @@ Loading the `us_cost_of_living` data set:
 us_cost_of_living
 ```
 
-Loading the `taxable_income` data set:
+Loading the `us_federal_tax_rate` data set:
 
 ```{r}
-us_taxable_income
+us_federal_tax_rate
 ```
 
-Here is a summary of the `us_cost_of_living` data set:
+Loading the `us_state_local_tax_rate` data set:
 
-```{r us_cost_of_living}
-summary(us_cost_of_living)
+```{r}
+us_state_local_tax_rate
+```
+
+`gross_salary()` is used as a helper function that calculates the annual gross salary of a single person earning minimum wage. It is mainly to aid the functionality of other functions:
+
+```{r example-1}
+gross_salary("CA")
 ```
 
 This is an example of how to calculate the annual gross salary of a single person earning minimum wage in a specific state/a few different states:
 
-```{r example-1}
+```{r example-2}
 gross_salary_multiple("MA")
 ```
 
-```{r example-2}
+```{r example-3}
 gross_salary_multiple(c("MA","TX","IL","AL"))
+```
+This is an example of how to calculate the amount of federal tax owed by a single person earning minimum wage in a specific state:
+
+```{r example-4}
+federal_tax_owed("TN")
 ```
 
 # Phase III Package Proposal 

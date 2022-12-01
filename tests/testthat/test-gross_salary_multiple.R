@@ -1,9 +1,6 @@
 test_that("Testing gross_salary_multiple(\"MA\")", {
   expected <- data.frame(state=("Massachusetts"),
                          state_abbr=("MA"),
-                         state_tax_rate=(6.25),
-                         avg_local_tax_rate=(0),
-                         combined_tax_rate=(6.25),
                          cost_index=(135),
                          grocery_cost_index=(119.3),
                          housing_cost_index=(177.6),
@@ -24,9 +21,6 @@ test_that("Testing gross_salary_multiple(\"MA\")", {
 test_that("Testing gross_salary_multiple(\"MA\", \"TX\", \"IL\", \"AL\")", {
   expected <- data.frame(state=c("Massachusetts", "Texas", "Illinois", "Alabama"),
                          state_abbr=c("MA", "TX", "IL", "AL"),
-                         state_tax_rate=c(6.25, 6.25, 6.25, 4.00),
-                         avg_local_tax_rate=c(0.00, 1.94, 2.49, 5.14),
-                         combined_tax_rate=c(6.25, 8.19, 8.74, 9.14),
                          cost_index=c(135.0, 92.1, 94.3, 87.9),
                          grocery_cost_index=c(119.3, 90.8, 98.4, 98.2),
                          housing_cost_index=c(177.6, 83.8, 86.6, 70.1),

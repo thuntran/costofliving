@@ -1,0 +1,51 @@
+state,state_abbr,state_tax_rate,avg_local_tax_rate,combined_tax_rate
+Alabama,AL,4,5.14,9.14
+Alaska,AK,0,1.43,1.43
+Arizona,AZ,5.6,2.77,8.37
+Arkansas,AR,6.5,2.93,9.43
+California,CA,7.25,1.31,8.56
+Colorado,CO,2.9,4.73,7.63
+Connecticut,CT,6.35,0,6.35
+Delaware,DE,0,0,0
+Florida,FL,6,1.05,7.05
+Georgia,GA,4,3.29,7.29
+Hawaii,HI,4,0.41,4.41
+Idaho,ID,6,0.03,6.03
+Illinois,IL,6.25,2.49,8.74
+Indiana,IN,7,0,7
+Iowa,IA,6,0.82,6.82
+Kansas,KS,6.5,2.17,8.67
+Kentucky,KY,6,0,6
+Louisiana,LA,4.45,5,9.45
+Maine,ME,5.5,0,5.5
+Maryland,MD,6,0,6
+Massachusetts,MA,6.25,0,6.25
+Michigan,MI,6,0,6
+Minnesota,MN,6.88,0.55,7.43
+Mississippi,MS,7,0.07,7.07
+Missouri,MO,4.23,3.9,8.13
+Montana,MT,0,0,0
+Nebraska,NE,5.5,1.35,6.85
+Nevada,NV,6.85,1.29,8.14
+New Hampshire,NH,0,0,0
+New Jersey,NJ,6.63,-0.03,6.6
+New Mexico,NM,5.13,2.69,7.82
+New York,NY,4,4.49,8.49
+North Carolina,NC,4.75,2.22,6.97
+North Dakota,ND,5,1.85,6.85
+Ohio,OH,5.75,1.42,7.17
+Oklahoma,OK,4.5,4.42,8.92
+Oregon,OR,0,0,0
+Pennsylvania,PA,6,0.34,6.34
+Rhode Island,RI,7,0,7
+South Carolina,SC,6,1.43,7.43
+South Dakota,SD,4.5,1.9,6.4
+Tennessee,TN,7,2.47,9.47
+Texas,TX,6.25,1.94,8.19
+Utah,UT,5.95,0.99,6.94
+Vermont,VT,6,0.18,6.18
+Virginia,VA,5.3,0.35,5.65
+Washington,WA,6.5,2.67,9.17
+West Virginia,WV,6,0.39,6.39
+Wisconsin,WI,5,0.44,5.44
+Wyoming,WY,4,1.36,5.36

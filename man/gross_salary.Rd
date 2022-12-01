@@ -2,7 +2,7 @@
 % Please edit documentation in R/salary_functions.R
 \name{gross_salary}
 \alias{gross_salary}
-\title{Helper function to calculate gross salary of one state}
+\title{Function to calculate gross salary of one state}
 \usage{
 gross_salary(input_state)
 }
