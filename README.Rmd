@@ -52,6 +52,12 @@ Loading the `us_cost_of_living` data set:
 us_cost_of_living
 ```
 
+Loading the `us_minimum_wage` data set:
+
+```{r}
+us_minimum_wage
+```
+
 Loading the `us_federal_tax_rate` data set:
 
 ```{r}
