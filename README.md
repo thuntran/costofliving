@@ -239,6 +239,6 @@ yearly update.
 
 # Contributors
 
-- [Thu Tran](https://github.com/thuntran)
-- [Nina Hernandez](http://github.com/nhernandez3)
-- [My My Tran](http://github.com/puppehmama)
+-   [Thu Tran](https://github.com/thuntran)
+-   [Nina Hernandez](http://github.com/nhernandez3)
+-   [My My Tran](http://github.com/puppehmama)
