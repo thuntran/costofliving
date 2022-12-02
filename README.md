@@ -133,29 +133,6 @@ gross_salary("CA")
 #> 1 California CA                   15        31200
 ```
 
-This is an example of how to calculate the annual gross salary of a
-single person earning minimum wage in a specific state/a few different
-states:
-
-``` r
-gross_salary_multiple("MA")
-#> # A tibble: 1 × 4
-#>   state         state_abbr minimum_wage gross_salary
-#>   <chr>         <chr>             <dbl>        <dbl>
-#> 1 Massachusetts MA                 14.2        29640
-```
-
-``` r
-gross_salary_multiple(c("MA","TX","IL","AL"))
-#> # A tibble: 4 × 4
-#>   state         state_abbr minimum_wage gross_salary
-#>   <chr>         <chr>             <dbl>        <dbl>
-#> 1 Massachusetts MA                14.2         29640
-#> 2 Texas         TX                 7.25        15080
-#> 3 Illinois      IL                12           24960
-#> 4 Alabama       AL                 7.25        15080
-```
-
 This is an example of how to calculate the amount of federal tax owed by
 a single person earning minimum wage in a specific state:
 
@@ -165,6 +142,66 @@ federal_tax_owed("TN")
 #>   state     state_abbr minimum_wage gross_salary federal_tax_owed
 #>   <chr>     <chr>             <dbl>        <dbl>            <dbl>
 #> 1 Tennessee TN                 7.25        15080            1604.
+```
+
+This is an example of how to calculate the amount of state and local tax
+owed by a single person earning minimum wage in a specific state:
+
+``` r
+state_local_tax_owed("MS")
+#> # A tibble: 1 × 6
+#>   state       state_abbr minimum_wage gross_salary federal_tax_owed state_loca…¹
+#>   <chr>       <chr>             <dbl>        <dbl>            <dbl>        <dbl>
+#> 1 Mississippi MS                 7.25        15080            1604.        1066.
+#> # … with abbreviated variable name ¹​state_local_tax_owed
+```
+
+This is an example of how to calculate the total tax owed and the net
+salary after tax deductions by a single person earning minimum wage in a
+specific state:
+
+``` r
+net_salary("TX")
+#> # A tibble: 1 × 8
+#>   state state_abbr minimum_wage gross_salary federal_t…¹ state…² total…³ net_s…⁴
+#>   <chr> <chr>             <dbl>        <dbl>       <dbl>   <dbl>   <dbl>   <dbl>
+#> 1 Texas TX                 7.25        15080       1604.   1235.   2839.  12241.
+#> # … with abbreviated variable names ¹​federal_tax_owed, ²​state_local_tax_owed,
+#> #   ³​total_tax_owed, ⁴​net_salary
+```
+
+This is an example of how to calculate the difference between average
+cost of living and net salary for a single person earning minimum wage
+in a specific state:
+
+``` r
+net_salary_avg_col_difference("AL")
+#> # A tibble: 1 × 9
+#>   state   state_abbr minimum_w…¹ gross…² feder…³ state…⁴ total…⁵ net_s…⁶ net_s…⁷
+#>   <chr>   <chr>            <dbl>   <dbl>   <dbl>   <dbl>   <dbl>   <dbl>   <dbl>
+#> 1 Alabama AL                7.25   15080   1604.   1378.   2982.  12098. -14602.
+#> # … with abbreviated variable names ¹​minimum_wage, ²​gross_salary,
+#> #   ³​federal_tax_owed, ⁴​state_local_tax_owed, ⁵​total_tax_owed, ⁶​net_salary,
+#> #   ⁷​net_salary_avg_col_difference
+```
+
+This is an example of how to calculate gross salary, tax, net salary,
+and difference between average cost of living and net salary across
+multiple states of a single person earning minimum wage in a specific
+state/a few different states:
+
+``` r
+avg_col_multiple_states(c("MA","TX","IL","AL"))
+#> # A tibble: 4 × 9
+#>   state         state_…¹ minim…² gross…³ feder…⁴ state…⁵ total…⁶ net_s…⁷ net_s…⁸
+#>   <chr>         <chr>      <dbl>   <dbl>   <dbl>   <dbl>   <dbl>   <dbl>   <dbl>
+#> 1 Massachusetts MA         14.2    29640   3351.   1852.   5204.  24436. -12333.
+#> 2 Texas         TX          7.25   15080   1604.   1235.   2839.  12241. -17002.
+#> 3 Illinois      IL         12      24960   2790.   2182.   4971.  19989. -10528.
+#> 4 Alabama       AL          7.25   15080   1604.   1378.   2982.  12098. -14602.
+#> # … with abbreviated variable names ¹​state_abbr, ²​minimum_wage, ³​gross_salary,
+#> #   ⁴​federal_tax_owed, ⁵​state_local_tax_owed, ⁶​total_tax_owed, ⁷​net_salary,
+#> #   ⁸​net_salary_avg_col_difference
 ```
 
 # Phase III Package Proposal
@@ -202,6 +239,6 @@ yearly update.
 
 # Contributors
 
--   [Thu Tran](https://github.com/thuntran)
--   [Nina Hernandez](http://github.com/nhernandez3)
--   [My My Tran](http://github.com/puppehmama)
+- [Thu Tran](https://github.com/thuntran)
+- [Nina Hernandez](http://github.com/nhernandez3)
+- [My My Tran](http://github.com/puppehmama)

@@ -76,20 +76,34 @@ us_state_local_tax_rate
 gross_salary("CA")
 ```
 
-This is an example of how to calculate the annual gross salary of a single person earning minimum wage in a specific state/a few different states:
-
-```{r example-2}
-gross_salary_multiple("MA")
-```
-
-```{r example-3}
-gross_salary_multiple(c("MA","TX","IL","AL"))
-```
 This is an example of how to calculate the amount of federal tax owed by a single person earning minimum wage in a specific state:
 
 ```{r example-4}
 federal_tax_owed("TN")
 ```
+
+This is an example of how to calculate the amount of state and local tax owed by a single person earning minimum wage in a specific state:
+
+```{r}
+state_local_tax_owed("MS")
+```
+This is an example of how to calculate the total tax owed and the net salary after tax deductions by a single person earning minimum wage in a specific state:
+
+```{r}
+net_salary("TX")
+```
+This is an example of how to calculate the difference between average cost of living and net salary for a single person earning minimum wage in a specific state:
+
+```{r}
+net_salary_avg_col_difference("AL")
+```
+This is an example of how to calculate gross salary, tax, net salary, and difference between average cost of living and net salary across multiple states of a single person earning minimum wage in a specific state/a few different states:
+
+```{r}
+avg_col_multiple_states(c("MA","TX","IL","AL"))
+```
+
+
 
 # Phase III Package Proposal 
 
