@@ -27,5 +27,6 @@ Imports:
     dplyr,
     magrittr,
     purrr,
-    utils
+    utils,
+    ggplot2
 VignetteBuilder: knitr
