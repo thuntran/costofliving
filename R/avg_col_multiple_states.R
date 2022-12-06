@@ -22,9 +22,7 @@
 #'
 
 avg_col_multiple_states <- function(states) {
-  # each state is passed to the `net_salary_avg_col_difference()` function and iterated using map()
-  state_rows <- map(states, net_salary_avg_col_difference)
-  # separate tibbles are combined into one
-  state_rows <- bind_rows(state_rows)
+  # map the `net_salary_avg_col_difference()` function to each state in the `states` vector
+  state_rows <- map_df(states, net_salary_avg_col_difference)
   return(state_rows)
 }

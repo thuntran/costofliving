@@ -25,10 +25,7 @@ globalVariables(c("min_income", "max_income", "fed_tax_rate", "us_federal_tax_ra
 #'
 
 federal_tax_owed <- function(input_state) {
-  # checks if user inputs a valid state abbreviation
   if (input_state %in% us_minimum_wage$state_abbr) {
-    # the user's input is passed through the `gross_salary()` function
-    # the output is saved to state_row
     state_row <- gross_salary(input_state)
     # subset the gross_salary column to perform calculations
     state_gross_salary <- state_row$gross_salary
@@ -37,25 +34,25 @@ federal_tax_owed <- function(input_state) {
     if (state_gross_salary >= us_federal_tax_rate$min_income[1] & state_gross_salary <= us_federal_tax_rate$max_income[1]) {
       state_row <- state_row %>%
         # calculate the federal tax owed by multiplying gross salary by the tax rate (and add any baseline numbers if necessary)
-        mutate(federal_tax_owed = state_gross_salary * (us_federal_tax_rate$fed_tax_rate[1] / 100))
+        mutate(federal_tax_owed = as.double(format(round(state_gross_salary * (us_federal_tax_rate$fed_tax_rate[1] / 100), 2), nsmall = 2)))
     } else if (state_gross_salary >= us_federal_tax_rate$min_income[2] & state_gross_salary <= us_federal_tax_rate$max_income[2]) {
       state_row <- state_row %>%
-        mutate(federal_tax_owed = (state_gross_salary - 10275) * (us_federal_tax_rate$fed_tax_rate[2] / 100) + 1027.50)
+        mutate(federal_tax_owed = as.double(format(round((state_gross_salary - 10275) * (us_federal_tax_rate$fed_tax_rate[2] / 100) + 1027.50, 2), nsmall = 2)))
     } else if (state_gross_salary >= us_federal_tax_rate$min_income[3] & state_gross_salary <= us_federal_tax_rate$max_income[3]) {
       state_row <- state_row %>%
-        mutate(federal_tax_owed = (state_gross_salary - 41775) * (us_federal_tax_rate$fed_tax_rate[3] / 100) + 4807.50)
+        mutate(federal_tax_owed = as.double(format(round((state_gross_salary - 41775) * (us_federal_tax_rate$fed_tax_rate[3] / 100) + 4807.50, 2), nsmall = 2)))
     } else if (state_gross_salary >= us_federal_tax_rate$min_income[4] & state_gross_salary <= us_federal_tax_rate$max_income[4]) {
       state_row <- state_row %>%
-        mutate(federal_tax_owed = (state_gross_salary - 89075) * (us_federal_tax_rate$fed_tax_rate[4] / 100) + 15213.50)
+        mutate(federal_tax_owed = as.double(format(round((state_gross_salary - 89075) * (us_federal_tax_rate$fed_tax_rate[4] / 100) + 15213.50, 2), nsmall = 2)))
     } else if (state_gross_salary >= us_federal_tax_rate$min_income[5] & state_gross_salary <= us_federal_tax_rate$max_income[5]) {
       state_row <- state_row %>%
-        mutate(federal_tax_owed = (state_gross_salary - 170050) * (us_federal_tax_rate$fed_tax_rate[5] / 100) + 34647.50)
+        mutate(federal_tax_owed = as.double(format(round((state_gross_salary - 170050) * (us_federal_tax_rate$fed_tax_rate[5] / 100) + 34647.50, 2), nsmall = 2)))
     } else if (state_gross_salary >= us_federal_tax_rate$min_income[6] & state_gross_salary <= us_federal_tax_rate$max_income[6]) {
       state_row <- state_row %>%
-        mutate(federal_tax_owed = (state_gross_salary - 215950) * (us_federal_tax_rate$fed_tax_rate[6] / 100) + 49335.50)
+        mutate(federal_tax_owed = as.double(format(round((state_gross_salary - 215950) * (us_federal_tax_rate$fed_tax_rate[6] / 100) + 49335.50, 2), nsmall = 2)))
     } else { # also means state_gross_salary >= us_federal_tax_rate$min_income[7]
       state_row <- state_row %>%
-        mutate(federal_tax_owed = (state_gross_salary - 539900) * (us_federal_tax_rate$fed_tax_rate[7] / 100) + 162718)
+        mutate(federal_tax_owed = as.double(format(round((state_gross_salary - 539900) * (us_federal_tax_rate$fed_tax_rate[7] / 100) + 162718, 2), nsmall = 2)))
     }
     return(state_row)
   }

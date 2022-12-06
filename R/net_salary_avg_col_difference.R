@@ -25,17 +25,13 @@ globalVariables(c("us_minimum_wage", "net_salary" , "us_cost_of_living", "net_sa
 #' net_salary_avg_col_difference("MA")
 #'
 net_salary_avg_col_difference <- function(input_state) {
-  # checks if user inputs a valid state abbreviation
   if (input_state %in% us_minimum_wage$state_abbr) {
-    # the user's input is passed through the `net_salary()` function
-    # the output is saved to state_row
     state_row <- net_salary(input_state)
     us_cost_of_living <- us_cost_of_living %>%
-      # filter by state from user input
       filter(state_abbr==input_state)
     state_row <- state_row %>%
       # the average cost of living is subtracted by the net salary (the difference)
-      mutate(net_salary_avg_col_difference = net_salary - us_cost_of_living$total_avg_cost)
+      mutate(net_salary_avg_col_difference = as.double(format(round(net_salary - us_cost_of_living$total_avg_cost, 2), nsmall = 2)))
     return(state_row)
   } else {
     # throws an error if user does not input a valid state

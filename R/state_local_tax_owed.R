@@ -25,17 +25,13 @@ globalVariables(c("us_minimum_wage", "federal_tax_owed" , "us_state_local_tax_ra
 #' state_local_tax_owed("MA")
 #'
 state_local_tax_owed <- function(input_state) {
-  # checks if user inputs a valid state abbreviation
   if (input_state %in% us_minimum_wage$state_abbr) {
-    # the user's input is passed through the `federal_tax_owed()` function
-    # the output is saved to state_row
     state_row <- federal_tax_owed(input_state)
     us_state_local_tax_rate <- us_state_local_tax_rate %>%
-      # filter by state from user input
       filter(state_abbr==input_state)
     state_row <- state_row %>%
       # state and local tax are calculated by multiplying the combined rate by the gross salary
-      mutate(state_local_tax_owed = (us_state_local_tax_rate$combined_tax_rate / 100) * gross_salary)
+      mutate(state_local_tax_owed = as.double(format(round((us_state_local_tax_rate$combined_tax_rate / 100) * gross_salary, 2), nsmall = 2)))
     return(state_row)
   } else {
     # throws an error if user does not input a valid state
