@@ -19,6 +19,5 @@ of a single person earning minimum wage at one or more states, given a vector of
 }
 \examples{
 avg_col_multiple_states_plot(c("MA","TX","IL","AL"))
-avg_col_multiple_states_plot("MA")
 
 }

@@ -21,8 +21,8 @@ globalVariables(c("avg_col_multiple_states", "net_salary_avg_col_difference", "s
 #'
 #' @examples
 #' avg_col_multiple_states_plot(c("MA","TX","IL","AL"))
-#' avg_col_multiple_states_plot("MA")
 #'
+
 avg_col_multiple_states_plot <- function(input) {
   table <- avg_col_multiple_states(input)
   table <- table %>%
