@@ -27,14 +27,12 @@ globalVariables(c("minimum_wage", "state_abbr", "us_minimum_wage"))
 #'
 
 gross_salary <- function(input_state) {
-  # checks if user inputs a valid state abbreviation
   if (input_state %in% us_minimum_wage$state_abbr) {
     us_cost_of_living_gross_salary <- us_minimum_wage %>%
-      # filter by state from user input
       filter(state_abbr==input_state) %>%
       # gross salary is calculated by working minimum wage 40 hours a week
       # and 52 weeks in a year
-      mutate(gross_salary = minimum_wage * 40 * 52)
+      mutate(gross_salary = as.double(format(round(minimum_wage * 40 * 52, 2), nsmall = 2)))
     return(us_cost_of_living_gross_salary)
   } else {
     # throws an error if user does not input a valid state

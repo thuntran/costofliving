@@ -1,31 +1,32 @@
-test_that ("Testing avg_col_multiple_states(c(\"MA\", \"TX\", \"IL\", \"AL\"))", {
+test_that("Testing avg_col_multiple_states(c(\"MA\", \"TX\", \"IL\", \"AL\"))", {
   expected <- data.frame(state=c("Massachusetts", "Texas", "Illinois", "Alabama"),
                          state_abbr=c("MA", "TX", "IL", "AL"),
                          minimum_wage=c(14.25, 7.25, 12.00, 7.25),
                          gross_salary=c(29640, 15080, 24960, 15080),
-                         federal_tax_owed=c(3351.2999999999997, 1604.1, 2789.7, 1604.1),
-                         state_local_tax_owed=c(1852.5, 1235.052, 2181.5040000000004, 1378.3120000000001),
-                         total_tax_owed=c(5203.7999999999993, 2839.152, 4971.204, 2982.4120000000003),
-                         net_salary=c(24436.20, 12240.848, 19988.796000000002, 12097.588),
-                         net_salary_avg_col_difference=c(-12332.8, -17002.152000000002, -10528.203999999998, -14602.412))
+                         federal_tax_owed=c(3351.3, 1604.1, 2789.7, 1604.1),
+                         state_local_tax_owed=c(1852.50, 1235.05, 2181.50, 1378.31),
+                         total_tax_owed=c(5203.80, 2839.15, 4971.20, 2982.41),
+                         net_salary=c(24436.20, 12240.85, 19988.80, 12097.59),
+                         net_salary_avg_col_difference=c(-12332.80, -17002.15, -10528.20, -14602.41))
   actual <- as.data.frame(avg_col_multiple_states(c("MA", "TX", "IL", "AL")))
   attr(actual, "spec") <- NULL
   attr(actual, "problems") <- NULL
   expect_identical(actual, expected)
 })
 
-test_that ("Testing avg_col_multiple_states(\"MA\")", {
+test_that("Testing avg_col_multiple_states(\"MA\")", {
   expected <- data.frame(state=("Massachusetts"),
                          state_abbr=("MA"),
                          minimum_wage=(14.25),
                          gross_salary=(29640),
-                         federal_tax_owed=(3351.2999999999997),
+                         federal_tax_owed=(3351.3),
                          state_local_tax_owed=(1852.5),
-                         total_tax_owed=(5203.7999999999993),
-                         net_salary=(24436.20),
+                         total_tax_owed=(5203.8),
+                         net_salary=(24436.2),
                          net_salary_avg_col_difference=(-12332.8))
   actual <- as.data.frame(avg_col_multiple_states("MA"))
   attr(actual, "spec") <- NULL
   attr(actual, "problems") <- NULL
   expect_identical(actual, expected)
 })
+
