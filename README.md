@@ -9,6 +9,7 @@
 experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
 [![CRAN
 status](https://www.r-pkg.org/badges/version/myspotify)](https://CRAN.R-project.org/package=costofliving)
+[![R-CMD-check](https://github.com/thuntran/costofliving/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/thuntran/costofliving/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
 ## Purpose
@@ -239,6 +240,6 @@ yearly update.
 
 # Contributors
 
--   [Thu Tran](https://github.com/thuntran)
--   [Nina Hernandez](http://github.com/nhernandez3)
--   [My My Tran](http://github.com/puppehmama)
+- [Thu Tran](https://github.com/thuntran)
+- [Nina Hernandez](http://github.com/nhernandez3)
+- [My My Tran](http://github.com/puppehmama)
