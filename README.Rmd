@@ -41,7 +41,7 @@ devtools::install_github("thuntran/costofliving")
 
 ## Example
 
-This is a basic example which shows you how to solve a common problem:
+Loading the `costofliving` package:
 
 ```{r load-package}
 library(costofliving)

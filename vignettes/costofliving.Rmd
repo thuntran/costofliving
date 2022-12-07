@@ -18,4 +18,86 @@ knitr::opts_chunk$set(
 library(costofliving)
 ```
 
-This is `costofliving` vignette.
+## Purpose
+
+The goal of `costofliving` is to provide functions and data sets to calculate the average cost of living for a single person earning a minimum wage salary across different states in the United States in 2022. This package also contains data from The World Population Review and the Missouri Economic Research and Information Center. 
+
+## Target Audience
+
+This package targets any working individuals in the US who would like to learn more about whether they find a state livable if they earn minimum wage in that state.
+
+
+## Installation
+
+You can install the development version of costofliving from [GitHub](https://github.com/) with:
+
+``` r
+# install.packages("devtools")
+devtools::install_github("thuntran/costofliving")
+```
+
+## Example
+
+Loading the `costofliving` package:
+
+```{r load-package}
+library(costofliving)
+```
+
+Loading the `us_cost_of_living` data set:
+
+```{r}
+us_cost_of_living
+```
+
+Loading the `us_minimum_wage` data set:
+
+```{r}
+us_minimum_wage
+```
+
+Loading the `us_federal_tax_rate` data set:
+
+```{r}
+us_federal_tax_rate
+```
+
+Loading the `us_state_local_tax_rate` data set:
+
+```{r}
+us_state_local_tax_rate
+```
+
+`gross_salary()` is used as a helper function that calculates the annual gross salary of a single person earning minimum wage. It is mainly to aid the functionality of other functions:
+
+```{r example-1}
+gross_salary("CA")
+```
+
+This is an example of how to calculate the amount of federal tax owed by a single person earning minimum wage in a specific state:
+
+```{r example-4}
+federal_tax_owed("TN")
+```
+
+This is an example of how to calculate the amount of state and local tax owed by a single person earning minimum wage in a specific state:
+
+```{r}
+state_local_tax_owed("MS")
+```
+This is an example of how to calculate the total tax owed and the net salary after tax deductions by a single person earning minimum wage in a specific state:
+
+```{r}
+net_salary("TX")
+```
+This is an example of how to calculate the difference between average cost of living and net salary for a single person earning minimum wage in a specific state:
+
+```{r}
+net_salary_avg_col_difference("AL")
+```
+This is an example of how to calculate gross salary, tax, net salary, and difference between average cost of living and net salary across multiple states of a single person earning minimum wage in a specific state/a few different states:
+
+```{r}
+avg_col_multiple_states(c("MA","TX","IL","AL"))
+```
+
