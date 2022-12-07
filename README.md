@@ -38,7 +38,7 @@ devtools::install_github("thuntran/costofliving")
 
 ## Example
 
-This is a basic example which shows you how to solve a common problem:
+Loading the `costofliving` package:
 
 ``` r
 library(costofliving)
@@ -240,6 +240,6 @@ yearly update.
 
 # Contributors
 
-- [Thu Tran](https://github.com/thuntran)
-- [Nina Hernandez](http://github.com/nhernandez3)
-- [My My Tran](http://github.com/puppehmama)
+-   [Thu Tran](https://github.com/thuntran)
+-   [Nina Hernandez](http://github.com/nhernandez3)
+-   [My My Tran](http://github.com/puppehmama)
