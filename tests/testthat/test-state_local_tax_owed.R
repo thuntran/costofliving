@@ -10,3 +10,12 @@ test_that("Testing state_local_tax_owed(\"MA\")", {
   attr(actual, "problems") <- NULL
   expect_identical(actual, expected)
 })
+
+test_that("Testing state_local_tax_owed(\"Texas\")", {
+  expected <- print("Error: Please enter valid state abbreviations and check that the letters are capitalized.")
+  actual <- state_local_tax_owed("Texas")
+
+  attr(actual, "spec") <- NULL
+  attr(actual, "problems") <- NULL
+  expect_identical(actual, expected)
+})

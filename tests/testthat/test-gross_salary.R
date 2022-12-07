@@ -8,3 +8,12 @@ test_that("Testing gross_salary(\"MA\")", {
   attr(actual, "problems") <- NULL
   expect_identical(actual, expected)
 })
+
+test_that("Testing gross_salary(\"AM\")", {
+  expected <- print("Error: Please enter valid state abbreviations and check that the letters are capitalized.")
+  actual <- gross_salary("AM")
+
+  attr(actual, "spec") <- NULL
+  attr(actual, "problems") <- NULL
+  expect_identical(actual, expected)
+})

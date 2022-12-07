@@ -12,3 +12,12 @@ test_that("Testing net_salary(\"MA\")", {
   attr(actual, "problems") <- NULL
   expect_identical(actual, expected)
 })
+
+test_that("Testing net_salary(\"Massachusetts\")", {
+  expected <- print("Error: Please enter valid state abbreviations and check that the letters are capitalized.")
+  actual <- net_salary("Massachusetts")
+
+  attr(actual, "spec") <- NULL
+  attr(actual, "problems") <- NULL
+  expect_identical(actual, expected)
+})
