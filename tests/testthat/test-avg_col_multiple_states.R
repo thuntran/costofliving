@@ -30,3 +30,11 @@ test_that("Testing avg_col_multiple_states(\"MA\")", {
   expect_identical(actual, expected)
 })
 
+testthat::test_that("Testing the number of columns in the avg_col_multiple_states df output is correct)", {
+  expect_equal(ncol(avg_col_multiple_states(c("MA", "TX", "IL", "AL"))), 9)
+})
+
+test_that("Testing the number of rows in the avg_col_multiple_states df output)", {
+  expect_equal(nrow(avg_col_multiple_states(c("MA", "TX", "IL", "AL"))), 4)
+})
+
