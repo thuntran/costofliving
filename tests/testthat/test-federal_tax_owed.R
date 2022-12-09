@@ -18,6 +18,14 @@ test_that("Testing federal_tax_owed(\"AM\")", {
   expect_identical(actual, expected)
 })
 
+test_that("Testing federal_tax_owed(38393)", {
+  expected <- print("Error: Please enter valid state abbreviations and check that the letters are capitalized.")
+  actual <- federal_tax_owed(38393)
+  attr(actual, "spec") <- NULL
+  attr(actual, "problems") <- NULL
+  expect_identical(actual, expected)
+})
+
 test_that("Testing federal_tax_owed(\"MA\") output dimensions", {
   expected <- data.frame(state=("Massachusetts"),
                          state_abbr=("MA"),

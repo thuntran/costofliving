@@ -29,6 +29,7 @@ test_that("Testing avg_col_multiple_states(\"MA\")", {
   attr(actual, "problems") <- NULL
   expect_identical(actual, expected)
 })
+
 test_that("Testing net_salary_avg_col_difference(\"MA\") output dimensions", {
   expected <- data.frame(state=("Massachusetts"),
                          state_abbr=("MA"),
@@ -44,8 +45,6 @@ test_that("Testing net_salary_avg_col_difference(\"MA\") output dimensions", {
   attr(actual, "problems") <- NULL
   expect_true(all_equal(actual,expected))
 })
-
-
 
 test_that("Testing whether columns names are correct in avg_col_multiple_states(\"MA\")", {
   expected <- c("state","state_abbr", "minimum_wage", "gross_salary","federal_tax_owed", "state_local_tax_owed", "total_tax_owed", "net_salary", "net_salary_avg_col_difference")
