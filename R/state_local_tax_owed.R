@@ -26,7 +26,7 @@ globalVariables(c("us_minimum_wage", "federal_tax_owed" , "us_state_local_tax_ra
 #'
 state_local_tax_owed <- function(input_state) {
   if (input_state %in% us_minimum_wage$state_abbr) {
-    state_row <- federal_tax_owed(input_state)
+    state_row <- gross_salary(input_state)
     us_state_local_tax_rate <- us_state_local_tax_rate %>%
       filter(state_abbr==input_state)
     state_row <- state_row %>%
