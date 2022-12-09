@@ -35,10 +35,9 @@ test_that("Testing state_local_tax_owed(\"MA\" dimensions)", {
 })
 
 
-testthat::test_that("number of columns in state_local_tax_owed(\"MA\") df output is correct", {
-  expect_equal(ncol(state_local_tax_owed("MA")), 6)
-})
 
-test_that("number of rows in Astate_local_tax_owed(\"MA\") df output is correct", {
-  expect_equal(nrow(state_local_tax_owed("MA")), 1)
+test_that("columns names are correct in state_local_tax_owed", {
+  col_names<-c("state","state_abbr", "minimum_wage", "gross_salary","federal_tax_owed", "state_local_tax_owed")
+  actual <- names(state_local_tax_owed("MA"))
+  expect_identical(actual, col_names)
 })

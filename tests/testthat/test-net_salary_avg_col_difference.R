@@ -40,10 +40,8 @@ test_that("Testing net_salary_avg_col_difference(\"MA\" dimensions)", {
 })
 
 
-testthat::test_that("Testing the number of columns in the net_salary_avg_col_differencedf output is correct)", {
-  expect_equal(ncol(net_salary_avg_col_difference("MA")), 9)
-})
-
-test_that("Testing the number of rows in the net_salary_avg_col_difference df output)", {
-  expect_equal(nrow(net_salary_avg_col_difference("MA")), 1)
+test_that("columns names are correct in avg_col_difference", {
+  col_names<-c("state","state_abbr", "minimum_wage", "gross_salary","federal_tax_owed", "state_local_tax_owed","total_tax_owed", "net_salary", "net_salary_avg_col_difference")
+  actual <- names(net_salary_avg_col_difference("MA"))
+  expect_identical(actual, col_names)
 })

@@ -38,10 +38,8 @@ test_that("Testing net_salary(\"MA\" dimensions)", {
 })
 
 
-testthat::test_that("Testing the number of columns in the net_salary df output is correct)", {
-  expect_equal(ncol(net_salary("MA")), 8)
-})
-
-test_that("Testing the number of rows in the net_salary df output)", {
-  expect_equal(nrow(net_salary("MA")), 1)
+test_that("columns names are correct in net_salary", {
+  col_names<-c("state","state_abbr", "minimum_wage", "gross_salary","federal_tax_owed", "state_local_tax_owed", "total_tax_owed", "net_salary")
+  actual <- names(net_salary("MA"))
+  expect_identical(actual, col_names)
 })

@@ -29,12 +29,26 @@ test_that("Testing avg_col_multiple_states(\"MA\")", {
   attr(actual, "problems") <- NULL
   expect_identical(actual, expected)
 })
-
-testthat::test_that("Testing the number of columns in the avg_col_multiple_states df output is correct)", {
-  expect_equal(ncol(avg_col_multiple_states(c("MA", "TX", "IL", "AL"))), 9)
+test_that("Testing net_salary_avg_col_difference(\"MA\" dimensions)", {
+  expected <- data.frame(state=("Massachusetts"),
+                         state_abbr=("MA"),
+                         minimum_wage=(14.25),
+                         gross_salary=(29640),
+                         federal_tax_owed=(3351.3),
+                         state_local_tax_owed=(1852.5),
+                         total_tax_owed=(5203.8),
+                         net_salary=(24436.2),
+                         net_salary_avg_col_difference=(-12332.8))
+  actual <- as.data.frame(net_salary_avg_col_difference("MA"))
+  attr(actual, "spec") <- NULL
+  attr(actual, "problems") <- NULL
+  expect_true(all_equal(actual,expected))
 })
 
-test_that("Testing the number of rows in the avg_col_multiple_states df output)", {
-  expect_equal(nrow(avg_col_multiple_states(c("MA", "TX", "IL", "AL"))), 4)
-})
 
+
+test_that("columns names are correct in avg_col_multiple_states", {
+  col_names<-c("state","state_abbr", "minimum_wage", "gross_salary","federal_tax_owed", "state_local_tax_owed", "total_tax_owed", "net_salary", "net_salary_avg_col_difference")
+  actual <- names(avg_col_multiple_states("MA"))
+  expect_identical(actual, col_names)
+})

@@ -31,11 +31,9 @@ test_that("Testing federal_tax_owed(\"MA\" dimensions)", {
 })
 
 
-testthat::test_that("Testing the number of columns in the federal_tax_owed df output is correct)", {
-  expect_equal(ncol(federal_tax_owed("MA")), 5)
-})
-
-test_that("Testing the number of rows in the federal_tax_owed df output)", {
-  expect_equal(nrow(federal_tax_owed("MA")), 1)
+test_that("columns names are correct in federal_tax_owed", {
+  col_names<-c("state","state_abbr", "minimum_wage", "gross_salary","federal_tax_owed")
+  actual <- names(federal_tax_owed("MA"))
+  expect_identical(actual, col_names)
 })
 
