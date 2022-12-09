@@ -22,6 +22,14 @@ test_that("Testing net_salary(\"Massachusetts\")", {
   expect_identical(actual, expected)
 })
 
+test_that("Testing net_salary(12345)", {
+  expected <- print("Error: Please enter valid state abbreviations and check that the letters are capitalized.")
+  actual <- net_salary(12345)
+  attr(actual, "spec") <- NULL
+  attr(actual, "problems") <- NULL
+  expect_identical(actual, expected)
+})
+
 test_that("Testing net_salary(\"MA\") output dimensions", {
   expected <- data.frame(state=("Massachusetts"),
                          state_abbr=("MA"),
@@ -36,7 +44,6 @@ test_that("Testing net_salary(\"MA\") output dimensions", {
   attr(actual, "problems") <- NULL
   expect_identical(dim(actual), dim(expected))
 })
-
 
 test_that("Testing whether columns names are correct in net_salary(\"MA\")", {
   expected <- c("state","state_abbr", "minimum_wage", "gross_salary","federal_tax_owed", "state_local_tax_owed", "total_tax_owed", "net_salary")
