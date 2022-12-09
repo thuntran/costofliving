@@ -25,8 +25,11 @@ globalVariables(c("us_minimum_wage", "federal_tax_owed" , "total_tax_owed", "sta
 #'
 net_salary <- function(input_state) {
   if (input_state %in% us_minimum_wage$state_abbr) {
-    state_row <- state_local_tax_owed(input_state)
-    state_row <- state_row %>%
+    federal_tax_owed_row <- federal_tax_owed(input_state)
+    state_local_tax_owed_row <- state_local_tax_owed(input_state)
+    state_row <- federal_tax_owed_row %>%
+      # add state_local_tax_owed column
+      mutate(state_local_tax_owed = state_local_tax_owed_row$state_local_tax_owed) %>%
       # total tax owed is calculated by adding state, local, and federal tax amounts
       mutate(total_tax_owed = as.double(format(round(state_local_tax_owed + federal_tax_owed, 2), nsmall = 2))) %>%
       # net salary is calculated by finding the difference between gross salary and total tax owed

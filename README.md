@@ -150,11 +150,10 @@ owed by a single person earning minimum wage in a specific state:
 
 ``` r
 state_local_tax_owed("MS")
-#> # A tibble: 1 × 6
-#>   state       state_abbr minimum_wage gross_salary federal_tax_owed state_loca…¹
-#>   <chr>       <chr>             <dbl>        <dbl>            <dbl>        <dbl>
-#> 1 Mississippi MS                 7.25        15080            1604.        1066.
-#> # … with abbreviated variable name ¹​state_local_tax_owed
+#> # A tibble: 1 × 5
+#>   state       state_abbr minimum_wage gross_salary state_local_tax_owed
+#>   <chr>       <chr>             <dbl>        <dbl>                <dbl>
+#> 1 Mississippi MS                 7.25        15080                1066.
 ```
 
 This is an example of how to calculate the total tax owed and the net
@@ -205,38 +204,24 @@ avg_col_multiple_states(c("MA","TX","IL","AL"))
 #> #   ⁸​net_salary_avg_col_difference
 ```
 
-# Phase III Package Proposal
+This is an example of how to plot the difference in average cost of
+living and net salary of a single person earning minimum wage in one or
+multiple states in the USA:
 
-Our R package idea will remain the same, with additional functions and
-further development for Phase III. We plan to implement two new
-functions:
+``` r
+avg_col_multiple_states_plot(c("MA","TX","IL","AL"))
+```
 
-1)  A net_salary() function that calculates the take-home pay (in 2022)
-    for an individual after deducting federal, state, and local taxes
-    from gross salaries based on income tax brackets, per state.
+<img src="man/figures/README-unnamed-chunk-10-1.png" width="100%" />
 
-2)  An avg_living_cost() function that calculates the difference between
-    the net salary and average living cost per state (which includes the
-    average cost of groceries, housing, utilities, transportation, and
-    miscellaneous items). This is essentially the remaining amount of
-    money (if there is) for an individual working minimum wage to
-    financially support themselves in 2022.
+Plotting the difference in average cost of living and net salary of a
+single person earning minimum wage across all states in the US:
 
-Besides, we would like to include the following data visualizations:
+``` r
+avg_col_multiple_states_plot_all()
+```
 
-1)  Scatter plots to view the average living costs and average net
-    salaries in multiple states (that the user selects).
-
-2)  An interactive USA map where the user can view the average living
-    costs per state using the R leaflet package.
-
-If there is additional time, we would like to calculate the average
-living costs per state based on a median household (family of four)
-where two parents earn minimum wage.
-
-If our package is published, since we are currently using data from 2022
-(minimum wage, average living costs, etc) we would expect to make a
-yearly update.
+<img src="man/figures/README-unnamed-chunk-11-1.png" width="100%" />
 
 # Contributors
 
