@@ -11,19 +11,13 @@ test_that("Testing federal_tax_owed(\"MA\")", {
 })
 
 test_that("Testing federal_tax_owed(\"AM\")", {
-  expected <- print("Error: Please enter valid state abbreviations and check that the letters are capitalized.")
-  actual <- federal_tax_owed("AM")
-  attr(actual, "spec") <- NULL
-  attr(actual, "problems") <- NULL
-  expect_identical(actual, expected)
+  expected_error_message <- "Please enter valid state abbreviations and check that the letters are capitalized."
+  expect_error(federal_tax_owed("AM"), expected_error_message)
 })
 
 test_that("Testing federal_tax_owed(38393)", {
-  expected <- print("Error: Please enter valid state abbreviations and check that the letters are capitalized.")
-  actual <- federal_tax_owed(38393)
-  attr(actual, "spec") <- NULL
-  attr(actual, "problems") <- NULL
-  expect_identical(actual, expected)
+  expected_error_message <- "Please enter valid state abbreviations and check that the letters are capitalized."
+  expect_error(federal_tax_owed(38393), expected_error_message)
 })
 
 test_that("Testing federal_tax_owed(\"MA\") output dimensions", {
