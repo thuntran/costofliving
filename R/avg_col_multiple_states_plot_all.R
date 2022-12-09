@@ -12,7 +12,6 @@ globalVariables(c("avg_col_multiple_states", "net_salary_avg_col_difference", "s
 #' @importFrom magrittr %>%
 #' @import ggplot2
 #'
-#' @param input An empty input
 #'
 #' @return A scatter plot of the difference in average cost of living
 #' for all states
@@ -22,7 +21,7 @@ globalVariables(c("avg_col_multiple_states", "net_salary_avg_col_difference", "s
 #' @examples
 #' avg_col_multiple_states_plot_all()
 #'
-avg_col_multiple_states_plot_all <- function(input) {
+avg_col_multiple_states_plot_all <- function() {
   table <- avg_col_multiple_states((c("AL","AK","AZ","AR","CA","CO","CT","DE","FL","GA","HI",
                                       "ID","IL","IN","IA","KS","KY","LA","ME","MD","MA","MI",
                                       "MN","MS","MO","MT","NE","NV","NH","NJ","NM","NY","NC",
@@ -30,11 +29,11 @@ avg_col_multiple_states_plot_all <- function(input) {
                                       "VT","VA","WA","WV","WI","WY")))
   table <- table %>%
     arrange(net_salary_avg_col_difference)
-  table$state_abbr <- factor(table$state_abbr, levels = table$state_abbr)
-  plot <- ggplot(table, aes(x=net_salary_avg_col_difference, y=state_abbr)) +
-    geom_point(color = 4) +
+  table$state_abbr <- factor(table$state_abbr, levels=table$state_abbr)
+  plot <- ggplot(table, aes(x=net_salary_avg_col_difference, y=factor(state_abbr))) +
+    geom_point(color=4, size=2) +
     theme(legend.position="none") +
-    labs(title = "Difference in Average Cost of Living and Minimum Wage Net Salaries Across States", x = "Difference in Average Cost of Living and Minimum Wage Net Salaries", y = "States")
+    labs(title="Difference in Average Cost of Living and Minimum Wage Net Salaries Across States", x="Difference in Average Cost of Living and Minimum Wage Net Salaries", y="States")
   return(plot)
 }
 

@@ -4,10 +4,7 @@
 \alias{avg_col_multiple_states_plot_all}
 \title{Function that plots the difference in average cost of living and net salary across all states}
 \usage{
-avg_col_multiple_states_plot_all(input)
-}
-\arguments{
-\item{input}{An empty input}
+avg_col_multiple_states_plot_all()
 }
 \value{
 A scatter plot of the difference in average cost of living
