@@ -30,7 +30,27 @@ test_that("Testing avg_col_multiple_states(\"MA\")", {
   expect_identical(actual, expected)
 })
 
-test_that("Testing net_salary_avg_col_difference(\"MA\") output dimensions", {
+test_that("Testing avg_col_multiple_states(\"Massachusetts\")", {
+  expected_error_message <- "Please enter valid state abbreviations and check that the letters are capitalized."
+  expect_error(avg_col_multiple_states("Massachusetts"), expected_error_message)
+})
+
+test_that("Testing avg_col_multiple_states(99)", {
+  expected_error_message <- "Please enter valid state abbreviations and check that the letters are capitalized."
+  expect_error(avg_col_multiple_states(99), expected_error_message)
+})
+
+test_that("Testing avg_col_multiple_states(c(\"Texas\", \"California\"))", {
+  expected_error_message <- "Please enter valid state abbreviations and check that the letters are capitalized."
+  expect_error(avg_col_multiple_states(c("Texas","California")), expected_error_message)
+})
+
+test_that("Testing avg_col_multiple_states(c(\"MA\", 123, \"TX\"))", {
+  expected_error_message <- "Please enter valid state abbreviations and check that the letters are capitalized."
+  expect_error(avg_col_multiple_states(c("MA", 123, "TX")), expected_error_message)
+})
+
+test_that("Testing avg_col_multiple_states(\"MA\") output dimensions", {
   expected <- data.frame(state=("Massachusetts"),
                          state_abbr=("MA"),
                          minimum_wage=(14.25),

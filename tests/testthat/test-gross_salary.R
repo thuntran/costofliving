@@ -10,28 +10,13 @@ test_that("Testing gross_salary(\"MA\")", {
 })
 
 test_that("Testing gross_salary(\"AM\")", {
-  expected <- print("Error: Please enter valid state abbreviations and check that the letters are capitalized.")
-  actual <- gross_salary("AM")
-  attr(actual, "spec") <- NULL
-  attr(actual, "problems") <- NULL
-  expect_identical(actual, expected)
-})
-
-test_that("Testing gross_salary(\"Massachusetts\")", {
-  expected <- print("Error: Please enter valid state abbreviations and check that the letters are capitalized.")
-  actual <- gross_salary("Massachusetts")
-
-  attr(actual, "spec") <- NULL
-  attr(actual, "problems") <- NULL
-  expect_identical(actual, expected)
+  expected_error_message <- "Please enter valid state abbreviations and check that the letters are capitalized."
+  expect_error(gross_salary("AM"), expected_error_message)
 })
 
 test_that("Testing gross_salary(12345)", {
-  expected <- print("Error: Please enter valid state abbreviations and check that the letters are capitalized.")
-  actual <- gross_salary(12345)
-  attr(actual, "spec") <- NULL
-  attr(actual, "problems") <- NULL
-  expect_identical(actual, expected)
+  expected_error_message <- "Please enter valid state abbreviations and check that the letters are capitalized."
+  expect_error(gross_salary(12345), expected_error_message)
 })
 
 test_that("Testing gross_salary(\"MA\") output dimensions", {

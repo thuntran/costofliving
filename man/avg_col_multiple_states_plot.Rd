@@ -4,10 +4,10 @@
 \alias{avg_col_multiple_states_plot}
 \title{Function that plots the difference in average cost of living and net salary}
 \usage{
-avg_col_multiple_states_plot(input)
+avg_col_multiple_states_plot(states)
 }
 \arguments{
-\item{input}{A list of states}
+\item{states}{A list of states}
 }
 \value{
 A scatter plot of the difference in average cost of living
