@@ -36,4 +36,3 @@ avg_col_multiple_states_plot_all <- function() {
     labs(title="Difference in Average Cost of Living and Minimum Wage Net Salaries Across States", x="Difference in Average Cost of Living and Minimum Wage Net Salaries", y="States")
   return(plot)
 }
-

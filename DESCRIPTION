@@ -28,5 +28,6 @@ Imports:
     magrittr,
     purrr,
     utils,
-    ggplot2
+    ggplot2,
+    scales
 VignetteBuilder: knitr
