@@ -1,7 +1,8 @@
 # Define global variables
 #'
 #' @import utils
-globalVariables(c("us_cost_of_living", "state_abbr", "state"))
+globalVariables(c("us_cost_of_living", "state_abbr", "state", "total_avg_cost",
+                  "t.avg_col_breakdown.", "living_cost", ""))
 #' Function that plots the average living costs per state
 #'
 #' A function that plots the average cost of living for a single person earning
@@ -11,7 +12,6 @@ globalVariables(c("us_cost_of_living", "state_abbr", "state"))
 #' @import dplyr
 #' @importFrom magrittr %>%
 #' @import ggplot2
-#' @import scales
 #'
 #' @param input_state A state name, abbreviated (e.g. MA)
 #'
@@ -35,10 +35,10 @@ avg_col_breakdown_plot <- function(input_state) {
   table$living_cost <- row.names(table)
   rownames(table) <- NULL
 
-  # create a new column for percentages
+  # idea in progress: create a new column calculating corresponding percentages
   # table$percentage <- round(100*t.avg_col_breakdown./sum(t.avg_col_breakdown./2))
 
-  View(table)
+  # View(table)
 
   plot <- ggplot(table, aes(x="", y=t.avg_col_breakdown., fill=living_cost)) +
     geom_bar(width = 1, stat = "identity") +
@@ -48,11 +48,14 @@ avg_col_breakdown_plot <- function(input_state) {
     guides(fill = guide_legend(title = "Type of Living Cost")) +
     labs(title = "Average cost of living breakdown per state", subtitle = input_state) +
     geom_text(aes(label = t.avg_col_breakdown.),
-              position = position_stack(vjust = 0.5), color = "black")
+              position = position_stack(vjust = 0.5), color = "black") +
 
-  ## percentages
-    geom_text(aes(y = t.avg_col_breakdown./6 + c(0, cumsum(t.avg_col_breakdown.)[-length(t.avg_col_breakdown.)]),
-                  label = percent(t.avg_col_breakdown./100)), size=3.5) +
+  ## second idea for percentages
+
+    # would have to import the scales package to use the percent() function
+
+    # geom_text(aes(y = t.avg_col_breakdown./6 + c(0, cumsum(t.avg_col_breakdown.)[-length(t.avg_col_breakdown.)]),
+    #               label = percent(t.avg_col_breakdown./100)), size=3.5)
   return(plot)
 
 }
