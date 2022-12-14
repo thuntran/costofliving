@@ -28,5 +28,8 @@ Imports:
     magrittr,
     purrr,
     utils,
-    ggplot2
+    ggplot2,
+    tidyr,
+    ggrepel,
+    forcats
 VignetteBuilder: knitr
