@@ -33,7 +33,7 @@ avg_col_breakdown_plot <- function(input_state) {
   }
 
   avg_col_breakdown <- us_cost_of_living %>%
-    filter(input_state==state_abbr)  %>%
+    filter(input_state==state_abbr) %>%
     subset(select=-c(state, state_abbr, total_avg_cost))
 
   # Convert df from wide to long format
@@ -61,15 +61,16 @@ avg_col_breakdown_plot <- function(input_state) {
     geom_col(width = 1, col = 1) +
     coord_polar(theta = "y") +
     scale_fill_brewer(palette="Pastel2") +
-
     geom_label_repel(data = pct_pos_table,
                      aes(y = pos, label = paste("$", cost, "\n(", cost_pct, "%)", sep="")),
-                     size = 3.5, nudge_x = 1, show.legend = FALSE) +
+                     size = 3.5,
+                     nudge_x = 1,
+                     show.legend = FALSE) +
     labs(title = plot_title) +
     guides(fill = guide_legend(title = "Type of Living Cost")) +
     theme_void()
 
-    # Add a plus sign at the end of the previous line if you want to de-comment this
+    # Add a plus sign at the end of the previous line if you want to uncomment this
     # geom_text(aes(label = cost),
     #           position = position_stack(vjust = 0.5), color = "black")
   return(plot)
