@@ -57,6 +57,7 @@ avg_col_breakdown_plot <- function(input_state) {
     select(state)
   plot_title <- paste("Average cost of living breakdown in", full_state_name, "in 2022")
 
+  # Create plot
   plot <- ggplot(table, aes(x="", y=cost_pct, fill=fct_inorder(category))) +
     geom_col(width = 1, col = 1) +
     coord_polar(theta = "y") +
@@ -70,9 +71,6 @@ avg_col_breakdown_plot <- function(input_state) {
     guides(fill = guide_legend(title = "Type of Living Cost")) +
     theme_void()
 
-    # Add a plus sign at the end of the previous line if you want to uncomment this
-    # geom_text(aes(label = cost),
-    #           position = position_stack(vjust = 0.5), color = "black")
   return(plot)
 
 }
