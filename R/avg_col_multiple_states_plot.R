@@ -31,6 +31,7 @@ avg_col_multiple_states_plot <- function(states) {
   plot <- ggplot(table, aes(x=net_salary_avg_col_difference, y=factor(state_abbr))) +
     geom_point(color=6, size=3) +
     theme(legend.position="none") +
-    labs(title="Difference in Average Cost of Living and Minimum Wage Net Salaries Across States", x="Difference in Average Cost of Living and Minimum Wage Net Salaries", y="States")
+    labs(title="Difference in Average Cost of Living and Minimum Wage Net Salaries Across States",
+         x="Difference in Average Cost of Living and Minimum Wage Net Salaries (dollars)", y="States")
   return(plot)
 }

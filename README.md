@@ -17,8 +17,9 @@ status](https://www.r-pkg.org/badges/version/myspotify)](https://CRAN.R-project.
 The goal of `costofliving` is to provide functions and data sets to
 calculate the average cost of living for a single person earning a
 minimum wage salary across different states in the United States in
-2022. This package also contains data from The World Population Review
-and the Missouri Economic Research and Information Center.
+2022. This package contains data from the MIT Living Wage Calculator,
+The World Population Review, and the Missouri Economic Research and
+Information Center.
 
 ## Target Audience
 
@@ -123,8 +124,8 @@ us_state_local_tax_rate
 ```
 
 `gross_salary()` is used as a helper function that calculates the annual
-gross salary of a single person earning minimum wage. It is mainly to
-aid the functionality of other functions:
+gross salary of a single person earning minimum wage. It the
+functionality of other functions:
 
 ``` r
 gross_salary("CA")
@@ -223,8 +224,17 @@ avg_col_multiple_states_plot_all()
 
 <img src="man/figures/README-unnamed-chunk-11-1.png" width="100%" />
 
+Here is an example of how to plot the breakdown of the average costs of
+living for a single person earning minimum wage in a specific state:
+
+``` r
+avg_col_breakdown_plot("WA")
+```
+
+<img src="man/figures/README-unnamed-chunk-12-1.png" width="100%" />
+
 # Contributors
 
--   [Thu Tran](https://github.com/thuntran)
--   [Nina Hernandez](http://github.com/nhernandez3)
--   [My My Tran](http://github.com/puppehmama)
+- [Thu Tran](https://github.com/thuntran)
+- [Nina Hernandez](http://github.com/nhernandez3)
+- [My My Tran](http://github.com/puppehmama)
