@@ -6,8 +6,8 @@ globalVariables(c("us_cost_of_living", "state_abbr", "state", "total_avg_cost",
                   "cost_pct", "csum", "pos"))
 #' Function that plots the average living costs per state
 #'
-#' A function that plots the average cost of living for a single person earning
-#' minimum wage at one state, given a state as input.
+#' A function that plots the average cost of living for a single person  at one state,
+#' given a state as input.
 #'
 #'
 #' @import dplyr
@@ -55,7 +55,7 @@ avg_col_breakdown_plot <- function(input_state) {
   full_state_name <- us_cost_of_living %>%
     filter(input_state==state_abbr) %>%
     select(state)
-  plot_title <- paste("Average cost of living breakdown in", full_state_name, "in 2022 (dollars)")
+  plot_title <- paste("Average cost of living breakdown in", full_state_name, "in 2022")
 
   # Create plot
   plot <- ggplot(table, aes(x="", y=cost_pct, fill=fct_inorder(category))) +

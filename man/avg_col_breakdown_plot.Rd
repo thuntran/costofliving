@@ -14,8 +14,8 @@ A pie chart of the average living costs for a single person
 earning minimum wage for one state
 }
 \description{
-A function that plots the average cost of living for a single person earning
-minimum wage at one state, given a state as input.
+A function that plots the average cost of living for a single person  at one state,
+given a state as input.
 }
 \examples{
 avg_col_breakdown_plot("MA")
