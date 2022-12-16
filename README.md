@@ -1,7 +1,7 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# costofliving
+# costofliving <img src='man/sticker/hexsticker.001.png' align="right" height="160"/>
 
 <!-- badges: start -->
 
@@ -235,6 +235,6 @@ avg_col_breakdown_plot("WA")
 
 # Contributors
 
-- [Thu Tran](https://github.com/thuntran)
-- [Nina Hernandez](http://github.com/nhernandez3)
-- [My My Tran](http://github.com/puppehmama)
+-   [Thu Tran](https://github.com/thuntran)
+-   [Nina Hernandez](http://github.com/nhernandez3)
+-   [My My Tran](http://github.com/puppehmama)
