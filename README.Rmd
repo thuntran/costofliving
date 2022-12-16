@@ -12,9 +12,8 @@ knitr::opts_chunk$set(
   out.width = "100%"
 )
 ```
-# pic <img src='sticker/hexsticker.001.png' align="right" height="160"/>
 
-# costofliving
+# costofliving <img src='man/sticker/hexsticker.001.png' align="right" height="160"/>
 
 <!-- badges: start -->
 [![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
@@ -123,7 +122,7 @@ avg_col_multiple_states_plot_all()
 Here is an example of how to plot the breakdown of the average costs of living for a single person earning minimum wage in a specific state:
 
 ```{r}
-#avg_col_breakdown_plot("WA")
+avg_col_breakdown_plot("WA")
 ```
 
 # Contributors
