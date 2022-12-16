@@ -56,7 +56,6 @@ avg_col_breakdown_plot <- function(input_state) {
     select(state)
   plot_title <- paste("Average Cost of Living Breakdown in", full_state_name, "in 2022 (in dollars)")
 
-  print(pct_pos_table)  # testing, will delete later
   # Create plot
   plot <- ggplot(table, aes(x="", y=cost_pct, fill=fct_inorder(category))) +
     geom_col(width = 1, col = 1) +
@@ -65,7 +64,7 @@ avg_col_breakdown_plot <- function(input_state) {
     geom_label(data = pct_pos_table,
                aes(y = pos, label = paste(cost, "\n(", cost_pct, "%)", sep="")),
                size = 3.5,
-               nudge_x = 1,
+               nudge_x = 0.75,
                show.legend = FALSE) +
     labs(title = plot_title) +
     guides(fill = guide_legend(title = "Type of Living Cost")) +
