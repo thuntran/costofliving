@@ -15,7 +15,8 @@ License: MIT + file LICENSE
 Suggests: 
     knitr,
     rmarkdown,
-    testthat (>= 3.0.0)
+    testthat (>= 3.0.0),
+    vdiffr
 Config/testthat/edition: 3
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
@@ -30,6 +31,5 @@ Imports:
     utils,
     ggplot2,
     tidyr,
-    forcats,
-    vdiffr
+    forcats
 VignetteBuilder: knitr
