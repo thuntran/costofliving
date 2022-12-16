@@ -24,10 +24,10 @@ Information Center.
 ## Target Audience
 
 In general, this package is for anyone interested in the breakdown of
-average living costs and net salaries across states in the U.S.
-Specifically, this package targets any working individuals in the U.S.
-who would like to learn more about whether they find a state livable if
-they a earn minimum wage salary in that state.
+average living costs and net salaries across states in the United
+States. Specifically, this package targets any working individuals in
+the U.S. who would like to learn more about whether they find a state
+livable if they a earn minimum wage salary in that state.
 
 ## Installation
 
@@ -127,6 +127,8 @@ us_minimum_wage
 - `avg_col_breakdown_plot`: Plots the average cost of living for a
   single person at a specific state.
 
+## Example of Functions:
+
 `gross_salary()` is used as a helper function that calculates the annual
 gross salary of a single person earning minimum wage. It aids the
 functionality of other functions:
@@ -141,7 +143,7 @@ gross_salary("CA")
 
 This is an example of how to calculate the net salary after deducting
 federal, state, and local taxes for a single person earning minimum wage
-in a specific state:
+in Texas:
 
 ``` r
 net_salary("TX")
@@ -155,7 +157,7 @@ net_salary("TX")
 
 This is an example of how to calculate the gross salary, total taxes,
 net salary, and difference between average cost of living and net salary
-for a single person earning minimum wage in a specific state:
+for a single person earning minimum wage in Alabama:
 
 ``` r
 net_salary_avg_col_difference("AL")
@@ -170,8 +172,8 @@ net_salary_avg_col_difference("AL")
 
 This is an example of how to calculate the gross salary, total taxes,
 net salary, and difference between average cost of living and net salary
-across multiple states of a single person earning minimum wage in a
-specific state/a few different states:
+across multiple states of a single person earning minimum wage in
+Massachusetts, Texas, Illinois, and Alabama:
 
 ``` r
 avg_col_multiple_states(c("MA","TX","IL","AL"))
@@ -188,8 +190,8 @@ avg_col_multiple_states(c("MA","TX","IL","AL"))
 ```
 
 This is an example of how to plot the difference in average cost of
-living and net salary of a single person earning minimum wage in one or
-multiple states in the USA:
+living and net salary of a single person earning minimum wage in
+Massachusetts, Texas, Illinois, and Alabama:
 
 ``` r
 avg_col_multiple_states_plot(c("MA","TX","IL","AL"))
@@ -207,7 +209,7 @@ avg_col_multiple_states_plot_all()
 <img src="man/figures/README-unnamed-chunk-8-1.png" width="100%" />
 
 Here is an example of how to plot the breakdown of the average costs of
-living for a single person earning minimum wage in a specific state:
+living for a single person earning minimum wage in Washington state:
 
 ``` r
 avg_col_breakdown_plot("WA")
