@@ -17,9 +17,10 @@ status](https://www.r-pkg.org/badges/version/myspotify)](https://CRAN.R-project.
 The goal of `costofliving` is to provide functions and data sets to
 calculate the average cost of living for a single person earning a
 minimum wage salary across different states in the United States in
-2022. This package contains data from the MIT Living Wage Calculator,
-The World Population Review, and the Missouri Economic Research and
-Information Center.
+2022. This package contains data from the [MIT Living Wage
+Calculator](https://livingwage.mit.edu/), [the World Population
+Review](https://worldpopulationreview.com/), and [the Missouri Economic
+Research and Information Center](https://meric.mo.gov/).
 
 ## Target Audience
 
@@ -59,46 +60,37 @@ library(costofliving)
 -   `us_state_local_tax_rate`: A data set of the state and average local
     tax rates across states in the U.S. in 2022.
 
-#### Example: `us_cost_of_living` data set
+### Example: `us_cost_of_living` data set
 
 ``` r
-us_cost_of_living
-#> # A tibble: 50 × 9
-#>    state       state_a…¹ groce…² medic…³ housi…⁴ trans…⁵ civic…⁶ other…⁷ total…⁸
-#>    <chr>       <chr>       <dbl>   <dbl>   <dbl>   <dbl>   <dbl>   <dbl>   <dbl>
-#>  1 Alabama     AL           3351    2733    8096    5509    2503    4508   26700
-#>  2 Alaska      AK           3999    2382   11162    4938    2581    4748   29810
-#>  3 Arizona     AZ           3999    2607   10988    4938    2581    4748   29861
-#>  4 Arkansas    AR           3351    2521    7402    5509    2503    4508   25794
-#>  5 California  CA           3999    2288   17651    4938    2581    4748   36205
-#>  6 Colorado    CO           3999    2729   13357    4938    2581    4748   32352
-#>  7 Connecticut CT           3891    2798   12498    4244    3207    5275   31913
-#>  8 Delaware    DE           3351    2863   10845    5509    2503    4508   29579
-#>  9 Florida     FL           3351    2871   11991    5509    2503    4508   30733
-#> 10 Georgia     GA           3351    2583   10882    5509    2503    4508   29336
-#> # … with 40 more rows, and abbreviated variable names ¹​state_abbr,
-#> #   ²​grocery_cost, ³​medical_cost, ⁴​housing_cost, ⁵​transportation_cost,
-#> #   ⁶​civic_cost, ⁷​other_cost, ⁸​total_avg_cost
+head(us_cost_of_living)
+#> # A tibble: 6 × 9
+#>   state      state_abbr grocer…¹ medic…² housi…³ trans…⁴ civic…⁵ other…⁶ total…⁷
+#>   <chr>      <chr>         <dbl>   <dbl>   <dbl>   <dbl>   <dbl>   <dbl>   <dbl>
+#> 1 Alabama    AL             3351    2733    8096    5509    2503    4508   26700
+#> 2 Alaska     AK             3999    2382   11162    4938    2581    4748   29810
+#> 3 Arizona    AZ             3999    2607   10988    4938    2581    4748   29861
+#> 4 Arkansas   AR             3351    2521    7402    5509    2503    4508   25794
+#> 5 California CA             3999    2288   17651    4938    2581    4748   36205
+#> 6 Colorado   CO             3999    2729   13357    4938    2581    4748   32352
+#> # … with abbreviated variable names ¹​grocery_cost, ²​medical_cost,
+#> #   ³​housing_cost, ⁴​transportation_cost, ⁵​civic_cost, ⁶​other_cost,
+#> #   ⁷​total_avg_cost
 ```
 
-#### Example: `us_minimum_wage` data set
+### Example: `us_minimum_wage` data set
 
 ``` r
-us_minimum_wage
-#> # A tibble: 50 × 3
-#>    state       state_abbr minimum_wage
-#>    <chr>       <chr>             <dbl>
-#>  1 Alabama     AL                 7.25
-#>  2 Alaska      AK                10.3 
-#>  3 Arizona     AZ                12.8 
-#>  4 Arkansas    AR                11   
-#>  5 California  CA                15   
-#>  6 Colorado    CO                12.6 
-#>  7 Connecticut CT                14   
-#>  8 Delaware    DE                10.5 
-#>  9 Florida     FL                10   
-#> 10 Georgia     GA                 7.25
-#> # … with 40 more rows
+head(us_minimum_wage)
+#> # A tibble: 6 × 3
+#>   state      state_abbr minimum_wage
+#>   <chr>      <chr>             <dbl>
+#> 1 Alabama    AL                 7.25
+#> 2 Alaska     AK                10.3 
+#> 3 Arizona    AZ                12.8 
+#> 4 Arkansas   AR                11   
+#> 5 California CA                15   
+#> 6 Colorado   CO                12.6
 ```
 
 ## Functions Included
@@ -128,7 +120,7 @@ us_minimum_wage
 -   `avg_col_breakdown_plot`: Plots the average cost of living for a
     single person at a specific state.
 
-#### Example of Functions
+### Example of Functions
 
 `gross_salary()` is used as a helper function that calculates the annual
 gross salary of a single person earning minimum wage. It aids the

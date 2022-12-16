@@ -23,7 +23,7 @@ knitr::opts_chunk$set(
 
 ## Purpose
 
-The goal of `costofliving` is to provide functions and data sets to calculate the average cost of living for a single person earning a minimum wage salary across different states in the United States in 2022. This package contains data from the MIT Living Wage Calculator, The World Population Review, and the Missouri Economic Research and Information Center.
+The goal of `costofliving` is to provide functions and data sets to calculate the average cost of living for a single person earning a minimum wage salary across different states in the United States in 2022. This package contains data from the [MIT Living Wage Calculator](https://livingwage.mit.edu/), [the World Population Review](https://worldpopulationreview.com/), and [the Missouri Economic Research and Information Center](https://meric.mo.gov/).
 
 ## Target Audience
 
@@ -53,30 +53,31 @@ library(costofliving)
   + `us_federal_tax_rate`: A data set of the federal tax rates based on income brackets in the U.S. in 2022. 
   + `us_state_local_tax_rate`: A data set of the state and average local tax rates across states in the U.S. in 2022.
 
-#### Example: `us_cost_of_living` data set
+### Example: `us_cost_of_living` data set
 
 ```{r}
 us_cost_of_living
 ```
 
-#### Example: `us_minimum_wage` data set
+### Example: `us_minimum_wage` data set
 
 ```{r}
 us_minimum_wage
 ```
 
 ## Functions Included
-  + `gross_salary`: Calculates the annual gross salary of a single person earning minimum wage at a specific state.
-  + `federal_tax_owed`: Calculates the amount of federal tax owed by an individual earning minimum wage based on federal income tax brackets.
-  + `state_local_tax_owed`: Calculates the amount of state and local tax owed by an individual earning minimum wage.
-  + `net_salary`: Calculates the combined tax amount (federal, state, local taxes) for by an individual earning minimum wage, and obtains the net salary by deducting from the gross salary.
-  + `net_salary_avg_col_difference`: Calculates the difference between the average costs of living by the net salary.
-  + `avg_col_multiple_states`: Calculates the annual gross salary, total tax (federal, state, local), net salary, and difference between average cost of living and net salary of a single person earning minimum wage at one or more states.
-  + `avg_col_multiple_states_plot`: Plots the difference in average cost of living and net salary of a single person earning minimum wage at one or more states.
-  + `avg_col_multiple_states_plot_all`: Plots the difference in average cost of living and net salary of a single person earning minimum wage across all states in the USA.
-  + `avg_col_breakdown_plot`: Plots the average cost of living for a single person at a specific state.
 
-#### Example of Functions
+  + `gross_salary()`: Calculates the annual gross salary of a single person earning minimum wage at a specific state.
+  + `federal_tax_owed()`: Calculates the amount of federal tax owed by an individual earning minimum wage based on federal income tax brackets.
+  + `state_local_tax_owed()`: Calculates the amount of state and local tax owed by an individual earning minimum wage.
+  + `net_salary()`: Calculates the combined tax amount (federal, state, local taxes) for by an individual earning minimum wage, and obtains the net salary by deducting from the gross salary.
+  + `net_salary_avg_col_difference()`: Calculates the difference between the average costs of living by the net salary.
+  + `avg_col_multiple_states()`: Calculates the annual gross salary, total tax (federal, state, local), net salary, and difference between average cost of living and net salary of a single person earning minimum wage at one or more states.
+  + `avg_col_multiple_states_plot()`: Plots the difference in average cost of living and net salary of a single person earning minimum wage at one or more states.
+  + `avg_col_multiple_states_plot_all()`: Plots the difference in average cost of living and net salary of a single person earning minimum wage across all states in the USA.
+  + `avg_col_breakdown_plot()`: Plots the average cost of living for a single person at a specific state.
+
+### Example of Functions
 
 `gross_salary()` is used as a helper function that calculates the annual gross salary of a single person earning minimum wage. It aids the functionality of other functions:
 
@@ -86,41 +87,41 @@ gross_salary("CA")
 
 This is an example of how to calculate the net salary after deducting federal, state, and local taxes for a single person earning minimum wage in Texas:
 
-```{r}
+```{r example-2}
 net_salary("TX")
 ```
 
 This is an example of how to calculate the gross salary, total taxes, net salary, and difference between average cost of living and net salary for a single person earning minimum wage in Alabama:
 
-```{r}
+```{r example-3}
 net_salary_avg_col_difference("AL")
 ```
 
 This is an example of how to calculate the gross salary, total taxes, net salary, and difference between average cost of living and net salary across multiple states of a single person earning minimum wage in Massachusetts, Texas, Illinois, and Alabama:
 
-```{r}
+```{r example-4}
 avg_col_multiple_states(c("MA","TX","IL","AL"))
 ```
 
 This is an example of how to plot the difference in average cost of living and net salary of a single person earning minimum wage in Massachusetts, Texas, Illinois, and Alabama:
 
-```{r}
+```{r example-5}
 avg_col_multiple_states_plot(c("MA","TX","IL","AL"))
 ```
 
 Plotting the difference in average cost of living and net salary of a single person earning minimum wage across all states in the US:
 
-```{r}
+```{r example-6}
 avg_col_multiple_states_plot_all()
 ```
 
 Here is an example of how to plot the breakdown of the average costs of living for a single person earning minimum wage in Washington state:
 
-```{r}
+```{r example-7}
 avg_col_breakdown_plot("WA")
 ```
 
-For more ways on how to use this package and its functions and data sets, please refer to the [vignette](https://github.com/thuntran/costofliving/blob/main/README.Rmd).
+For more ways on how to use this package and its functions and data sets, please refer to the [vignette](https://github.com/thuntran/costofliving/blob/main/vignettes/costofliving.Rmd).
 
 # Contributors
 
