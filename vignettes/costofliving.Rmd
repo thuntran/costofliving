@@ -100,4 +100,20 @@ This is an example of how to calculate gross salary, tax, net salary, and differ
 ```{r}
 avg_col_multiple_states(c("MA","TX","IL","AL"))
 ```
+This is an example of how to plot the difference in average cost of living and net salary of a single person earning minimum wage in one or multiple states in the USA:
 
+```{r}
+avg_col_multiple_states_plot(c("MA","TX","IL","AL"))
+```
+
+Plotting the difference in average cost of living and net salary of a single person earning minimum wage across all states in the US:
+
+```{r}
+avg_col_multiple_states_plot_all()
+```
+
+Here is an example of how to plot the breakdown of the average costs of living for a single person earning minimum wage in a specific state:
+
+```{r}
+avg_col_breakdown_plot("WA")
+```

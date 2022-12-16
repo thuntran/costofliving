@@ -9,8 +9,8 @@ Authors@R:
     person("Thu", "Tran", , "tntran@smith.edu", role = c("aut", "cre"),
            comment = c(ORCID = "YOUR-ORCID-ID"))
 Description: 
-    This package provigdes functions and data sets to calculate the average cost of living 
-    to a median household income (family of 4) where 2 parents make minimum wage salaries in 2022.
+    This package provides functions and data sets to calculate the average cost of living for a
+    single person earning a minimum wage salary across different states in the U.S. in 2022.
 License: MIT + file LICENSE
 Suggests: 
     knitr,
