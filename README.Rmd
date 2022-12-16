@@ -53,13 +53,13 @@ library(costofliving)
   + `us_federal_tax_rate`: A data set of the federal tax rates based on income brackets in the U.S. in 2022. 
   + `us_state_local_tax_rate`: A data set of the state and average local tax rates across states in the U.S. in 2022.
 
-## Example: `us_cost_of_living` data set:
+#### Example: `us_cost_of_living` data set
 
 ```{r}
 us_cost_of_living
 ```
 
-## Example: `us_minimum_wage` data set:
+#### Example: `us_minimum_wage` data set
 
 ```{r}
 us_minimum_wage
@@ -76,7 +76,7 @@ us_minimum_wage
   + `avg_col_multiple_states_plot_all`: Plots the difference in average cost of living and net salary of a single person earning minimum wage across all states in the USA.
   + `avg_col_breakdown_plot`: Plots the average cost of living for a single person at a specific state.
 
-## Example of Functions:
+#### Example of Functions
 
 `gross_salary()` is used as a helper function that calculates the annual gross salary of a single person earning minimum wage. It aids the functionality of other functions:
 
