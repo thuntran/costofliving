@@ -48,7 +48,7 @@ Loading the `costofliving` package:
 library(costofliving)
 ```
 
-## Datasets Included
+## Available Datasets
 
 -   `us_cost_of_living`: A data set containing the average living costs
     across states in the U.S., including housing, groceries, medical
@@ -63,68 +63,76 @@ library(costofliving)
 ### Example: `us_cost_of_living` data set
 
 ``` r
-head(us_cost_of_living)
-#> # A tibble: 6 × 9
-#>   state      state_abbr grocer…¹ medic…² housi…³ trans…⁴ civic…⁵ other…⁶ total…⁷
-#>   <chr>      <chr>         <dbl>   <dbl>   <dbl>   <dbl>   <dbl>   <dbl>   <dbl>
-#> 1 Alabama    AL             3351    2733    8096    5509    2503    4508   26700
-#> 2 Alaska     AK             3999    2382   11162    4938    2581    4748   29810
-#> 3 Arizona    AZ             3999    2607   10988    4938    2581    4748   29861
-#> 4 Arkansas   AR             3351    2521    7402    5509    2503    4508   25794
-#> 5 California CA             3999    2288   17651    4938    2581    4748   36205
-#> 6 Colorado   CO             3999    2729   13357    4938    2581    4748   32352
-#> # … with abbreviated variable names ¹​grocery_cost, ²​medical_cost,
-#> #   ³​housing_cost, ⁴​transportation_cost, ⁵​civic_cost, ⁶​other_cost,
-#> #   ⁷​total_avg_cost
+us_cost_of_living
+#> # A tibble: 50 × 9
+#>    state       state_a…¹ groce…² medic…³ housi…⁴ trans…⁵ civic…⁶ other…⁷ total…⁸
+#>    <chr>       <chr>       <dbl>   <dbl>   <dbl>   <dbl>   <dbl>   <dbl>   <dbl>
+#>  1 Alabama     AL           3351    2733    8096    5509    2503    4508   26700
+#>  2 Alaska      AK           3999    2382   11162    4938    2581    4748   29810
+#>  3 Arizona     AZ           3999    2607   10988    4938    2581    4748   29861
+#>  4 Arkansas    AR           3351    2521    7402    5509    2503    4508   25794
+#>  5 California  CA           3999    2288   17651    4938    2581    4748   36205
+#>  6 Colorado    CO           3999    2729   13357    4938    2581    4748   32352
+#>  7 Connecticut CT           3891    2798   12498    4244    3207    5275   31913
+#>  8 Delaware    DE           3351    2863   10845    5509    2503    4508   29579
+#>  9 Florida     FL           3351    2871   11991    5509    2503    4508   30733
+#> 10 Georgia     GA           3351    2583   10882    5509    2503    4508   29336
+#> # … with 40 more rows, and abbreviated variable names ¹​state_abbr,
+#> #   ²​grocery_cost, ³​medical_cost, ⁴​housing_cost, ⁵​transportation_cost,
+#> #   ⁶​civic_cost, ⁷​other_cost, ⁸​total_avg_cost
 ```
 
 ### Example: `us_minimum_wage` data set
 
 ``` r
-head(us_minimum_wage)
-#> # A tibble: 6 × 3
-#>   state      state_abbr minimum_wage
-#>   <chr>      <chr>             <dbl>
-#> 1 Alabama    AL                 7.25
-#> 2 Alaska     AK                10.3 
-#> 3 Arizona    AZ                12.8 
-#> 4 Arkansas   AR                11   
-#> 5 California CA                15   
-#> 6 Colorado   CO                12.6
+us_minimum_wage
+#> # A tibble: 50 × 3
+#>    state       state_abbr minimum_wage
+#>    <chr>       <chr>             <dbl>
+#>  1 Alabama     AL                 7.25
+#>  2 Alaska      AK                10.3 
+#>  3 Arizona     AZ                12.8 
+#>  4 Arkansas    AR                11   
+#>  5 California  CA                15   
+#>  6 Colorado    CO                12.6 
+#>  7 Connecticut CT                14   
+#>  8 Delaware    DE                10.5 
+#>  9 Florida     FL                10   
+#> 10 Georgia     GA                 7.25
+#> # … with 40 more rows
 ```
 
-## Functions Included
+## Available Functions
 
--   `gross_salary`: Calculates the annual gross salary of a single
+-   `gross_salary()`: Calculates the annual gross salary of a single
     person earning minimum wage at a specific state.
--   `federal_tax_owed`: Calculates the amount of federal tax owed by an
-    individual earning minimum wage based on federal income tax
+-   `federal_tax_owed()`: Calculates the amount of federal tax owed by
+    an individual earning minimum wage based on federal income tax
     brackets.
--   `state_local_tax_owed`: Calculates the amount of state and local tax
-    owed by an individual earning minimum wage.
--   `net_salary`: Calculates the combined tax amount (federal, state,
+-   `state_local_tax_owed()`: Calculates the amount of state and local
+    tax owed by an individual earning minimum wage.
+-   `net_salary()`: Calculates the combined tax amount (federal, state,
     local taxes) for by an individual earning minimum wage, and obtains
     the net salary by deducting from the gross salary.
--   `net_salary_avg_col_difference`: Calculates the difference between
+-   `net_salary_avg_col_difference()`: Calculates the difference between
     the average costs of living by the net salary.
--   `avg_col_multiple_states`: Calculates the annual gross salary, total
-    tax (federal, state, local), net salary, and difference between
-    average cost of living and net salary of a single person earning
-    minimum wage at one or more states.
--   `avg_col_multiple_states_plot`: Plots the difference in average cost
-    of living and net salary of a single person earning minimum wage at
-    one or more states.
--   `avg_col_multiple_states_plot_all`: Plots the difference in average
+-   `avg_col_multiple_states()`: Calculates the annual gross salary,
+    total tax (federal, state, local), net salary, and difference
+    between average cost of living and net salary of a single person
+    earning minimum wage at one or more states.
+-   `avg_col_multiple_states_plot()`: Plots the difference in average
     cost of living and net salary of a single person earning minimum
-    wage across all states in the USA.
--   `avg_col_breakdown_plot`: Plots the average cost of living for a
+    wage at one or more states.
+-   `avg_col_multiple_states_plot_all()`: Plots the difference in
+    average cost of living and net salary of a single person earning
+    minimum wage across all states in the USA.
+-   `avg_col_breakdown_plot()`: Plots the average cost of living for a
     single person at a specific state.
 
-### Example of Functions
+### Examples of Function Usage
 
-`gross_salary()` is used as a helper function that calculates the annual
-gross salary of a single person earning minimum wage. It aids the
-functionality of other functions:
+-   Calculating the gross salary for a single person earning minimum
+    wage in California:
 
 ``` r
 gross_salary("CA")
@@ -134,9 +142,8 @@ gross_salary("CA")
 #> 1 California CA                   15        31200
 ```
 
-This is an example of how to calculate the net salary after deducting
-federal, state, and local taxes for a single person earning minimum wage
-in Texas:
+-   Calculating the net salary after deducting federal, state, and local
+    taxes for a single person earning minimum wage in Texas:
 
 ``` r
 net_salary("TX")
@@ -148,9 +155,9 @@ net_salary("TX")
 #> #   ³​total_tax_owed, ⁴​net_salary
 ```
 
-This is an example of how to calculate the gross salary, total taxes,
-net salary, and difference between average cost of living and net salary
-for a single person earning minimum wage in Alabama:
+-   Calculating the gross salary, total taxes, net salary, and
+    difference between average cost of living and net salary for a
+    single person earning minimum wage in Alabama:
 
 ``` r
 net_salary_avg_col_difference("AL")
@@ -163,10 +170,10 @@ net_salary_avg_col_difference("AL")
 #> #   ⁷​net_salary_avg_col_difference
 ```
 
-This is an example of how to calculate the gross salary, total taxes,
-net salary, and difference between average cost of living and net salary
-across multiple states of a single person earning minimum wage in
-Massachusetts, Texas, Illinois, and Alabama:
+-   Calculating the gross salary, total taxes, net salary, and
+    difference between average cost of living and net salary across
+    multiple states of a single person earning minimum wage in
+    Massachusetts, Texas, Illinois, and Alabama:
 
 ``` r
 avg_col_multiple_states(c("MA","TX","IL","AL"))
@@ -182,37 +189,37 @@ avg_col_multiple_states(c("MA","TX","IL","AL"))
 #> #   ⁸​net_salary_avg_col_difference
 ```
 
-This is an example of how to plot the difference in average cost of
-living and net salary of a single person earning minimum wage in
-Massachusetts, Texas, Illinois, and Alabama:
+-   Plotting the difference in average cost of living and net salary of
+    a single person earning minimum wage in California, Florida, the
+    Washington state, and the New York state:
 
 ``` r
-avg_col_multiple_states_plot(c("MA","TX","IL","AL"))
+avg_col_multiple_states_plot(c("CA","FL","WA","NY"))
 ```
 
-<img src="man/figures/README-unnamed-chunk-7-1.png" width="100%" />
+<img src="man/figures/README-example-5-1.png" width="100%" />
 
-Plotting the difference in average cost of living and net salary of a
-single person earning minimum wage across all states in the US:
+-   Plotting the difference in average cost of living and net salary of
+    a single person earning minimum wage across all states in the US:
 
 ``` r
 avg_col_multiple_states_plot_all()
 ```
 
-<img src="man/figures/README-unnamed-chunk-8-1.png" width="100%" />
+<img src="man/figures/README-example-6-1.png" width="100%" />
 
-Here is an example of how to plot the breakdown of the average costs of
-living for a single person earning minimum wage in Washington state:
+-   Plotting the breakdown of the average costs of living for a single
+    person earning minimum wage in Arizona:
 
 ``` r
-avg_col_breakdown_plot("WA")
+avg_col_breakdown_plot("AZ")
 ```
 
-<img src="man/figures/README-unnamed-chunk-9-1.png" width="100%" />
+<img src="man/figures/README-example-7-1.png" width="100%" />
 
 For more ways on how to use this package and its functions and data
 sets, please refer to the
-[vignette](https://github.com/thuntran/costofliving/blob/main/README.Rmd).
+[vignette](https://github.com/thuntran/costofliving/blob/main/vignettes/costofliving.Rmd).
 
 # Contributors
 
