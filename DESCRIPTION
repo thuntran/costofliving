@@ -30,6 +30,6 @@ Imports:
     utils,
     ggplot2,
     tidyr,
-    ggrepel,
-    forcats
+    forcats,
+    vdiffr
 VignetteBuilder: knitr

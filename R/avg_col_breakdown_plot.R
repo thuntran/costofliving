@@ -14,7 +14,6 @@ globalVariables(c("us_cost_of_living", "state_abbr", "state", "total_avg_cost",
 #' @importFrom magrittr %>%
 #' @import ggplot2
 #' @import tidyr
-#' @import ggrepel
 #' @import forcats
 #'
 #' @param input_state A state name, abbreviated (e.g. MA)
@@ -55,18 +54,19 @@ avg_col_breakdown_plot <- function(input_state) {
   full_state_name <- us_cost_of_living %>%
     filter(input_state==state_abbr) %>%
     select(state)
-  plot_title <- paste("Average cost of living breakdown in", full_state_name, "in 2022 (dollars)")
+  plot_title <- paste("Average Cost of Living Breakdown in", full_state_name, "in 2022 (in dollars)")
 
+  print(pct_pos_table)  # testing, will delete later
   # Create plot
   plot <- ggplot(table, aes(x="", y=cost_pct, fill=fct_inorder(category))) +
     geom_col(width = 1, col = 1) +
     coord_polar(theta = "y") +
     scale_fill_brewer(palette="Set3") +
-    geom_label_repel(data = pct_pos_table,
-                     aes(y = pos, label = paste("$", cost, "\n(", cost_pct, "%)", sep="")),
-                     size = 3.5,
-                     nudge_x = 1,
-                     show.legend = FALSE) +
+    geom_label(data = pct_pos_table,
+               aes(y = pos, label = paste(cost, "\n(", cost_pct, "%)", sep="")),
+               size = 3.5,
+               nudge_x = 1,
+               show.legend = FALSE) +
     labs(title = plot_title) +
     guides(fill = guide_legend(title = "Type of Living Cost")) +
     theme_void()
