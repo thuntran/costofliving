@@ -39,8 +39,6 @@ You can install the development version of costofliving from [GitHub](https://gi
 devtools::install_github("thuntran/costofliving")
 ```
 
-## Example
-
 Loading the `costofliving` package:
 
 ```{r load-package}
@@ -80,49 +78,35 @@ us_minimum_wage
 
 ### Examples of Function Usage
 
-- Calculating the gross salary for a single person earning minimum wage in California:
-
 ```{r example-1}
 gross_salary("CA")
 ```
-
-- Calculating the net salary after deducting federal, state, and local taxes for a single person earning minimum wage in Texas:
 
 ```{r example-2}
 net_salary("TX")
 ```
 
-- Calculating the gross salary, total taxes, net salary, and difference between average cost of living and net salary for a single person earning minimum wage in Alabama:
-
 ```{r example-3}
 net_salary_avg_col_difference("AL")
 ```
-
-- Calculating the gross salary, total taxes, net salary, and difference between average cost of living and net salary across multiple states of a single person earning minimum wage in Massachusetts, Texas, Illinois, and Alabama:
 
 ```{r example-4}
 avg_col_multiple_states(c("MA","TX","IL","AL"))
 ```
 
-- Plotting the difference in average cost of living and net salary of a single person earning minimum wage in California, Florida, the Washington state, and the New York state:
-
 ```{r example-5}
 avg_col_multiple_states_plot(c("CA","FL","WA","NY"))
 ```
-
-- Plotting the difference in average cost of living and net salary of a single person earning minimum wage across all states in the US:
 
 ```{r example-6}
 avg_col_multiple_states_plot_all()
 ```
 
-- Plotting the breakdown of the average costs of living for a single person earning minimum wage in Arizona:
-
 ```{r example-7}
 avg_col_breakdown_plot("AZ")
 ```
 
-For more ways on how to use this package and its functions and data sets, please refer to the [vignette](https://github.com/thuntran/costofliving/blob/main/vignettes/costofliving.Rmd).
+For more examples on how to use the functions and data sets in this package, please refer to the [vignette](https://github.com/thuntran/costofliving/blob/main/vignettes/costofliving.Rmd).
 
 # Contributors
 

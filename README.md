@@ -40,8 +40,6 @@ You can install the development version of costofliving from
 devtools::install_github("thuntran/costofliving")
 ```
 
-## Example
-
 Loading the `costofliving` package:
 
 ``` r
@@ -131,9 +129,6 @@ us_minimum_wage
 
 ### Examples of Function Usage
 
--   Calculating the gross salary for a single person earning minimum
-    wage in California:
-
 ``` r
 gross_salary("CA")
 #> # A tibble: 1 × 4
@@ -141,9 +136,6 @@ gross_salary("CA")
 #>   <chr>      <chr>             <dbl>        <dbl>
 #> 1 California CA                   15        31200
 ```
-
--   Calculating the net salary after deducting federal, state, and local
-    taxes for a single person earning minimum wage in Texas:
 
 ``` r
 net_salary("TX")
@@ -155,10 +147,6 @@ net_salary("TX")
 #> #   ³​total_tax_owed, ⁴​net_salary
 ```
 
--   Calculating the gross salary, total taxes, net salary, and
-    difference between average cost of living and net salary for a
-    single person earning minimum wage in Alabama:
-
 ``` r
 net_salary_avg_col_difference("AL")
 #> # A tibble: 1 × 9
@@ -169,11 +157,6 @@ net_salary_avg_col_difference("AL")
 #> #   ³​federal_tax_owed, ⁴​state_local_tax_owed, ⁵​total_tax_owed, ⁶​net_salary,
 #> #   ⁷​net_salary_avg_col_difference
 ```
-
--   Calculating the gross salary, total taxes, net salary, and
-    difference between average cost of living and net salary across
-    multiple states of a single person earning minimum wage in
-    Massachusetts, Texas, Illinois, and Alabama:
 
 ``` r
 avg_col_multiple_states(c("MA","TX","IL","AL"))
@@ -189,18 +172,11 @@ avg_col_multiple_states(c("MA","TX","IL","AL"))
 #> #   ⁸​net_salary_avg_col_difference
 ```
 
--   Plotting the difference in average cost of living and net salary of
-    a single person earning minimum wage in California, Florida, the
-    Washington state, and the New York state:
-
 ``` r
 avg_col_multiple_states_plot(c("CA","FL","WA","NY"))
 ```
 
 <img src="man/figures/README-example-5-1.png" width="100%" />
-
--   Plotting the difference in average cost of living and net salary of
-    a single person earning minimum wage across all states in the US:
 
 ``` r
 avg_col_multiple_states_plot_all()
@@ -208,17 +184,14 @@ avg_col_multiple_states_plot_all()
 
 <img src="man/figures/README-example-6-1.png" width="100%" />
 
--   Plotting the breakdown of the average costs of living for a single
-    person earning minimum wage in Arizona:
-
 ``` r
 avg_col_breakdown_plot("AZ")
 ```
 
 <img src="man/figures/README-example-7-1.png" width="100%" />
 
-For more ways on how to use this package and its functions and data
-sets, please refer to the
+For more examples on how to use the functions and data sets in this
+package, please refer to the
 [vignette](https://github.com/thuntran/costofliving/blob/main/vignettes/costofliving.Rmd).
 
 # Contributors
