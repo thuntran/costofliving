@@ -106,7 +106,7 @@ avg_col_multiple_states_plot_all()
 avg_col_breakdown_plot("AZ")
 ```
 
-For more examples on how to use the functions and data sets in this package, please refer to the [vignette](https://github.com/thuntran/costofliving/blob/main/vignettes/costofliving.Rmd).
+For more details on how to use the functions and data sets in this package, please refer to the [vignette](https://github.com/thuntran/costofliving/blob/main/vignettes/costofliving.Rmd).
 
 # Contributors
 

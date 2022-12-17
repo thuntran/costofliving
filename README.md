@@ -190,7 +190,7 @@ avg_col_breakdown_plot("AZ")
 
 <img src="man/figures/README-example-7-1.png" width="100%" />
 
-For more examples on how to use the functions and data sets in this
+For more details on how to use the functions and data sets in this
 package, please refer to the
 [vignette](https://github.com/thuntran/costofliving/blob/main/vignettes/costofliving.Rmd).
 
