@@ -47,7 +47,8 @@ Loading the `costofliving` package:
 library(costofliving)
 ```
 
-## Datasets Included
+## Available Datasets
+
   + `us_cost_of_living`: A data set containing the average living costs across states in the U.S., including housing, groceries, medical care, etc. in 2022. 
   + `us_minimum_wage`: A data set containing minimum wage across states in the U.S. in 2022.
   + `us_federal_tax_rate`: A data set of the federal tax rates based on income brackets in the U.S. in 2022. 
@@ -65,7 +66,7 @@ us_cost_of_living
 us_minimum_wage
 ```
 
-## Functions Included
+## Available Functions
 
   + `gross_salary()`: Calculates the annual gross salary of a single person earning minimum wage at a specific state.
   + `federal_tax_owed()`: Calculates the amount of federal tax owed by an individual earning minimum wage based on federal income tax brackets.
@@ -77,48 +78,48 @@ us_minimum_wage
   + `avg_col_multiple_states_plot_all()`: Plots the difference in average cost of living and net salary of a single person earning minimum wage across all states in the USA.
   + `avg_col_breakdown_plot()`: Plots the average cost of living for a single person at a specific state.
 
-### Example of Functions
+### Examples of Function Usage
 
-`gross_salary()` is used as a helper function that calculates the annual gross salary of a single person earning minimum wage. It aids the functionality of other functions:
+- Calculating the gross salary for a single person earning minimum wage in California:
 
 ```{r example-1}
 gross_salary("CA")
 ```
 
-This is an example of how to calculate the net salary after deducting federal, state, and local taxes for a single person earning minimum wage in Texas:
+- Calculating the net salary after deducting federal, state, and local taxes for a single person earning minimum wage in Texas:
 
 ```{r example-2}
 net_salary("TX")
 ```
 
-This is an example of how to calculate the gross salary, total taxes, net salary, and difference between average cost of living and net salary for a single person earning minimum wage in Alabama:
+- Calculating the gross salary, total taxes, net salary, and difference between average cost of living and net salary for a single person earning minimum wage in Alabama:
 
 ```{r example-3}
 net_salary_avg_col_difference("AL")
 ```
 
-This is an example of how to calculate the gross salary, total taxes, net salary, and difference between average cost of living and net salary across multiple states of a single person earning minimum wage in Massachusetts, Texas, Illinois, and Alabama:
+- Calculating the gross salary, total taxes, net salary, and difference between average cost of living and net salary across multiple states of a single person earning minimum wage in Massachusetts, Texas, Illinois, and Alabama:
 
 ```{r example-4}
 avg_col_multiple_states(c("MA","TX","IL","AL"))
 ```
 
-This is an example of how to plot the difference in average cost of living and net salary of a single person earning minimum wage in Massachusetts, Texas, Illinois, and Alabama:
+- Plotting the difference in average cost of living and net salary of a single person earning minimum wage in California, Florida, the Washington state, and the New York state:
 
 ```{r example-5}
-avg_col_multiple_states_plot(c("MA","TX","IL","AL"))
+avg_col_multiple_states_plot(c("CA","FL","WA","NY"))
 ```
 
-Plotting the difference in average cost of living and net salary of a single person earning minimum wage across all states in the US:
+- Plotting the difference in average cost of living and net salary of a single person earning minimum wage across all states in the US:
 
 ```{r example-6}
 avg_col_multiple_states_plot_all()
 ```
 
-Here is an example of how to plot the breakdown of the average costs of living for a single person earning minimum wage in Washington state:
+- Plotting the breakdown of the average costs of living for a single person earning minimum wage in Arizona:
 
 ```{r example-7}
-avg_col_breakdown_plot("WA")
+avg_col_breakdown_plot("AZ")
 ```
 
 For more ways on how to use this package and its functions and data sets, please refer to the [vignette](https://github.com/thuntran/costofliving/blob/main/vignettes/costofliving.Rmd).
