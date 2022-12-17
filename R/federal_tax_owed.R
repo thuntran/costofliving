@@ -57,5 +57,6 @@ federal_tax_owed <- function(input_state) {
     state_row <- state_row %>%
       mutate(federal_tax_owed = as.double(format(round((state_gross_salary - 539900) * (us_federal_tax_rate$fed_tax_rate[7] / 100) + 162718, 2), nsmall = 2)))
   }
+
   return(state_row)
 }

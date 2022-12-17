@@ -2,13 +2,13 @@
 % Please edit documentation in R/avg_col_multiple_states_plot_all.R
 \name{avg_col_multiple_states_plot_all}
 \alias{avg_col_multiple_states_plot_all}
-\title{Function that plots the difference in average cost of living and net salary across all states}
+\title{Function that plots the difference in average cost of living and net salary
+across all states}
 \usage{
 avg_col_multiple_states_plot_all()
 }
 \value{
-A scatter plot of the difference in average cost of living
-for all states
+A scatter plot of the difference in average cost of living for all states
 }
 \description{
 A function that plots the difference in average cost of living and net salary

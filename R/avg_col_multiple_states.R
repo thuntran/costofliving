@@ -1,14 +1,14 @@
-#' Function to calculate gross salary, tax, net salary, and difference between average cost of living
-#' and net salary across multiple states
+#' Function to calculate gross salary, tax, net salary, and difference between
+#' average cost of living and net salary across multiple states
 #'
-#' A function that calculates the annual gross salary, total tax (federal, state, local), net salary,
-#' and difference between average cost of living and net salary
-#' of a single person earning minimum wage at one or more states, given a vector of states as input.
+#' A function that calculates the annual gross salary, total tax (federal, state, local),
+#' net salary, and difference between average cost of living and net salary of a single person
+#' earning minimum wage at one or more states, given a vector of states as input.
 #'
 #'
 #' @import dplyr
 #' @import purrr
-#' @param states A list of states
+#' @param states A list of states, abbreviated (e.g. c("MA", "TX", "IL", "AL"))
 #'
 #' @return A tibble of minimum wage, gross salaries earning minimum wage, federal,
 #' state, local taxes, net salaries, and difference between average cost of living
@@ -17,7 +17,7 @@
 #' @export
 #'
 #' @examples
-#' avg_col_multiple_states(c("MA","TX","IL","AL"))
+#' avg_col_multiple_states(c("MA", "TX", "IL", "AL"))
 #' avg_col_multiple_states("MA")
 #'
 

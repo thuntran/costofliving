@@ -44,6 +44,7 @@
 #' @docType data
 "us_federal_tax_rate"
 
+
 #' US state and average local tax rate data set
 #'
 #' A data set that contains information related to US state and average local tax rate data set.
@@ -63,6 +64,7 @@
 #'
 #' @docType data
 "us_state_local_tax_rate"
+
 
 #' US minimum wage data set
 #'

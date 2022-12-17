@@ -159,7 +159,7 @@ net_salary_avg_col_difference("AL")
 ```
 
 ``` r
-avg_col_multiple_states(c("MA","TX","IL","AL"))
+avg_col_multiple_states(c("MA", "TX", "IL", "AL"))
 #> # A tibble: 4 × 9
 #>   state         state_…¹ minim…² gross…³ feder…⁴ state…⁵ total…⁶ net_s…⁷ net_s…⁸
 #>   <chr>         <chr>      <dbl>   <dbl>   <dbl>   <dbl>   <dbl>   <dbl>   <dbl>
@@ -173,7 +173,7 @@ avg_col_multiple_states(c("MA","TX","IL","AL"))
 ```
 
 ``` r
-avg_col_multiple_states_plot(c("CA","FL","WA","NY"))
+avg_col_multiple_states_plot(c("CA", "FL", "WA", "NY"))
 ```
 
 <img src="man/figures/README-example-5-1.png" width="100%" />

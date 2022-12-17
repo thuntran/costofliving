@@ -2,8 +2,8 @@
 #'
 #' @import utils
 globalVariables(c("us_cost_of_living", "state_abbr", "state", "total_avg_cost",
-                  "t.avg_col_breakdown.", "living_cost", "", "category", "cost",
-                  "cost_pct", "csum", "pos"))
+                  "", "category", "cost", "cost_pct", "csum", "pos"))
+
 #' Function that plots the average living costs per state
 #'
 #' A function that plots the average cost of living for a single person  at one state,
@@ -18,22 +18,23 @@ globalVariables(c("us_cost_of_living", "state_abbr", "state", "total_avg_cost",
 #'
 #' @param input_state A state name, abbreviated (e.g. MA)
 #'
-#' @return A pie chart of the average living costs for a single person
-#' earning minimum wage for one state
+#' @return A pie chart of the average living costs for a single person earning
+#' minimum wage for one state
 #'
 #' @export
 #'
 #' @examples
 #' avg_col_breakdown_plot("MA")
 #'
+
 avg_col_breakdown_plot <- function(input_state) {
   if (!(input_state %in% us_cost_of_living$state_abbr)) {
     stop("Please enter valid state abbreviations and check that the letters are capitalized.")
   }
 
   avg_col_breakdown <- us_cost_of_living %>%
-    filter(input_state==state_abbr) %>%
-    subset(select=-c(state, state_abbr, total_avg_cost))
+    filter(input_state == state_abbr) %>%
+    subset(select = -c(state, state_abbr, total_avg_cost))
 
   # Convert df from wide to long format
   table <- avg_col_breakdown %>%
@@ -47,29 +48,30 @@ avg_col_breakdown_plot <- function(input_state) {
   # Create a position table based on percentage for labeling
   pct_pos_table <- table %>%
     mutate(csum = rev(cumsum(rev(cost_pct))),
-           pos = cost_pct/2 + lead(csum, 1),
-           pos = if_else(is.na(pos), cost_pct/2, pos))
+           pos = cost_pct / 2 + lead(csum, 1),
+           pos = if_else(is.na(pos), cost_pct / 2, pos))
 
   # Create a plot title
   full_state_name <- us_cost_of_living %>%
-    filter(input_state==state_abbr) %>%
+    filter(input_state == state_abbr) %>%
     select(state)
   plot_title <- paste("Average Cost of Living Breakdown in", full_state_name, "in 2022 (in Dollars)")
 
   # Create plot
-  plot <- ggplot(table, aes(x="", y=cost_pct, fill=fct_inorder(category))) +
+  plot <- ggplot(table, aes(x = "", y = cost_pct, fill = fct_inorder(category))) +
     geom_col(width = 1, col = 1) +
     coord_polar(theta = "y") +
-    scale_fill_brewer(palette="Set3") +
-    geom_label(data = pct_pos_table,
-               aes(y = pos, label = paste(cost, "\n(", cost_pct, "%)", sep="")),
-               size = 3.5,
-               nudge_x = 0.75,
-               show.legend = FALSE) +
+    scale_fill_brewer(palette = "Set3") +
+    geom_label(
+      data = pct_pos_table,
+      aes(y = pos, label = paste(cost, "\n(", cost_pct, "%)", sep = "")),
+      size = 3.5,
+      nudge_x = 0.75,
+      show.legend = FALSE
+    ) +
     labs(title = plot_title) +
     guides(fill = guide_legend(title = "Type of Living Cost")) +
     theme_void()
 
   return(plot)
-
 }

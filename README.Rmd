@@ -91,11 +91,11 @@ net_salary_avg_col_difference("AL")
 ```
 
 ```{r example-4}
-avg_col_multiple_states(c("MA","TX","IL","AL"))
+avg_col_multiple_states(c("MA", "TX", "IL", "AL"))
 ```
 
 ```{r example-5}
-avg_col_multiple_states_plot(c("CA","FL","WA","NY"))
+avg_col_multiple_states_plot(c("CA", "FL", "WA", "NY"))
 ```
 
 ```{r example-6}

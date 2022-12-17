@@ -2,7 +2,8 @@
 % Please edit documentation in R/state_local_tax_owed.R
 \name{state_local_tax_owed}
 \alias{state_local_tax_owed}
-\title{Function to calculate the state and local tax owed by an individual based on their gross income}
+\title{Function to calculate the state and local tax owed by an individual based on
+their gross income}
 \usage{
 state_local_tax_owed(input_state)
 }
@@ -10,13 +11,13 @@ state_local_tax_owed(input_state)
 \item{input_state}{A state name, abbreviated (e.g. MA)}
 }
 \value{
-A tibble of the state, minimum wage, gross salary calculation
-earning minimum wage, federal tax owed based on income, and state and local tax owed
+A tibble of the state, minimum wage, gross salary calculation earning
+minimum wage, federal tax owed based on income, and state and local tax owed
 based on income
 }
 \description{
-A function that calculates the amount of state and local tax owed by an individual earning
-minimum wage, given a state as input.
+A function that calculates the amount of state and local tax owed by an individual
+earning minimum wage, given a state as input.
 }
 \examples{
 state_local_tax_owed("TX")

@@ -2,7 +2,8 @@
 % Please edit documentation in R/net_salary.R
 \name{net_salary}
 \alias{net_salary}
-\title{Function to calculate the total tax owed and net salary of an individual based on their gross income}
+\title{Function to calculate the total tax owed and net salary of an individual
+based on their gross income}
 \usage{
 net_salary(input_state)
 }
@@ -10,12 +11,12 @@ net_salary(input_state)
 \item{input_state}{A state name, abbreviated (e.g. MA)}
 }
 \value{
-A tibble of the state, minimum wage, gross salary,
-total tax owed based on income, and net salary
+A tibble of the state, minimum wage, gross salary, total tax owed
+based on income, and net salary
 }
 \description{
-A function that calculates the combined amount of federal, state, and local tax owed by an individual earning
-minimum wage, and their net salary, given a state as input.
+A function that calculates the combined amount of federal, state, and local tax owed
+by an individual earning minimum wage, and their net salary, given a state as input.
 }
 \examples{
 net_salary("TX")

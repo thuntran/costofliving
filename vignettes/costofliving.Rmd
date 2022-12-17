@@ -100,7 +100,7 @@ net_salary_avg_col_difference("AL")
 - This is an example of calculating the gross salary, total taxes, net salary, and difference between average cost of living and net salary across multiple states of a single person earning minimum wage in Massachusetts, Texas, Illinois, and Alabama:
 
 ```{r example-4}
-avg_col_multiple_states(c("MA","TX","IL","AL"))
+avg_col_multiple_states(c("MA", "TX", "IL", "AL"))
 ```
 
 - This is an example of plotting the breakdown of the average costs of living for a single person earning minimum wage in Arizona:
@@ -112,7 +112,7 @@ avg_col_breakdown_plot("AZ")
 - This is an example of plotting the difference in average cost of living and net salary of a single person earning minimum wage in California, Florida, the Washington state, and the New York state:
 
 ```{r example-5, fig.dim=c(7, 5.5)}
-avg_col_multiple_states_plot(c("CA","FL","WA","NY"))
+avg_col_multiple_states_plot(c("CA", "FL", "WA", "NY"))
 ```
 
 - Plotting the difference in average cost of living and net salary of a single person earning minimum wage across all states in the US:
