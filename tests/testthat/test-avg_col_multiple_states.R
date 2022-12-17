@@ -50,6 +50,11 @@ test_that("Testing avg_col_multiple_states(c(\"MA\", 123, \"TX\"))", {
   expect_error(avg_col_multiple_states(c("MA", 123, "TX")), expected_error_message)
 })
 
+test_that("Testing avg_col_multiple_states(c(\"MA\", \"MA\"))", {
+  expected_error_message <- "You might have entered the same state twice. Please try again."
+  expect_error(avg_col_multiple_states(c("MA", "MA")), expected_error_message)
+})
+
 test_that("Testing avg_col_multiple_states(\"MA\") output dimensions", {
   expected <- data.frame(state=("Massachusetts"),
                          state_abbr=("MA"),
