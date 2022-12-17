@@ -24,6 +24,10 @@ globalVariables(c("avg_col_multiple_states", "net_salary_avg_col_difference", "s
 #'
 
 avg_col_multiple_states_plot <- function(states) {
+  if (length(states) == 1) {
+    stop("Please enter 2 or more states to proceed.")
+  }
+
   table <- avg_col_multiple_states(states)
   table <- table %>%
     arrange(net_salary_avg_col_difference)
