@@ -1,7 +1,7 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# costofliving <img src='man/sticker/hexsticker.001.png' align="right" height="160"/>
+# costofliving <img src='man/sticker/hexsticker.png' align="right" height="160"/>
 
 <!-- badges: start -->
 

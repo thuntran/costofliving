@@ -13,7 +13,7 @@ knitr::opts_chunk$set(
 )
 ```
 
-# costofliving <img src='man/sticker/hexsticker.001.png' align="right" height="160"/>
+# costofliving <img src='man/sticker/hexsticker.png' align="right" height="160"/>
 
 <!-- badges: start -->
 [![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
