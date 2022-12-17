@@ -10,13 +10,12 @@ net_salary_avg_col_difference(input_state)
 \item{input_state}{A state name, abbreviated (e.g. MA)}
 }
 \value{
-A tibble of the state, minimum wage, gross salary,
-minimum wage, total tax, net salary,
-and the difference between net salary and average cost of living
+A tibble of the state, minimum wage, gross salary, minimum wage, total tax,
+net salary,and the difference between net salary and average cost of living
 }
 \description{
-A function that calculates the difference between the average costs of living (grocery, medical, housing, etc)
-by net salary, given a state as input.
+A function that calculates the difference between the average costs of living
+(grocery, medical, housing, etc) by net salary, given a state as input.
 }
 \examples{
 net_salary_avg_col_difference("TX")

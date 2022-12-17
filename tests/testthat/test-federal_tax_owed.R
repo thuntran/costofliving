@@ -1,9 +1,11 @@
 test_that("Testing federal_tax_owed(\"MA\")", {
-  expected <- data.frame(state=("Massachusetts"),
-                         state_abbr=("MA"),
-                         minimum_wage=(14.25),
-                         gross_salary=(29640),
-                         federal_tax_owed=(3351.3))
+  expected <- data.frame(
+    state = ("Massachusetts"),
+    state_abbr = ("MA"),
+    minimum_wage = (14.25),
+    gross_salary = (29640),
+    federal_tax_owed = (3351.3)
+  )
   actual <- as.data.frame(federal_tax_owed("MA"))
   attr(actual, "spec") <- NULL
   attr(actual, "problems") <- NULL
@@ -21,11 +23,13 @@ test_that("Testing federal_tax_owed(38393)", {
 })
 
 test_that("Testing federal_tax_owed(\"MA\") output dimensions", {
-  expected <- data.frame(state=("Massachusetts"),
-                         state_abbr=("MA"),
-                         minimum_wage=(14.25),
-                         gross_salary=(29640),
-                         federal_tax_owed=(3351.3))
+  expected <- data.frame(
+    state = ("Massachusetts"),
+    state_abbr = ("MA"),
+    minimum_wage = (14.25),
+    gross_salary = (29640),
+    federal_tax_owed = (3351.3)
+  )
   actual <- as.data.frame(federal_tax_owed("MA"))
   attr(actual, "spec") <- NULL
   attr(actual, "problems") <- NULL
@@ -34,7 +38,7 @@ test_that("Testing federal_tax_owed(\"MA\") output dimensions", {
 
 
 test_that("Testing whether columns names are correct in federal_tax_owed(\"MA\")", {
-  expected <- c("state","state_abbr", "minimum_wage", "gross_salary","federal_tax_owed")
+  expected <- c("state", "state_abbr", "minimum_wage", "gross_salary", "federal_tax_owed")
   actual <- names(federal_tax_owed("MA"))
   expect_identical(actual, expected)
 })

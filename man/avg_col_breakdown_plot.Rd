@@ -10,8 +10,8 @@ avg_col_breakdown_plot(input_state)
 \item{input_state}{A state name, abbreviated (e.g. MA)}
 }
 \value{
-A pie chart of the average living costs for a single person
-earning minimum wage for one state
+A pie chart of the average living costs for a single person earning
+minimum wage for one state
 }
 \description{
 A function that plots the average cost of living for a single person  at one state,

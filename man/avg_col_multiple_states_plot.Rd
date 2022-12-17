@@ -7,7 +7,7 @@
 avg_col_multiple_states_plot(states)
 }
 \arguments{
-\item{states}{A list of states}
+\item{states}{A list of states, abbreviated (e.g. c("MA", "TX", "IL", "AL"))}
 }
 \value{
 A scatter plot of the difference in average cost of living
@@ -15,9 +15,10 @@ for one or multiple states
 }
 \description{
 A function that plots the difference in average cost of living and net salary
-of a single person earning minimum wage at one or more states, given a vector of states as input.
+of a single person earning minimum wage at one or more states, given a vector
+of states as input.
 }
 \examples{
-avg_col_multiple_states_plot(c("MA","TX","IL","AL"))
+avg_col_multiple_states_plot(c("MA", "TX", "IL", "AL"))
 
 }

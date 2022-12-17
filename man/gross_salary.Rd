@@ -16,9 +16,6 @@ earning minimum wage
 \description{
 A function that calculates the annual gross salary of a single person earning
 minimum wage at a specific state, given a state as input.
-\code{gross_salary} is an added column to the existing \code{us_minimum_wage} data set.
-This serves as a helper function to the following \code{avg_col_multiple_states()}
-function.
 }
 \examples{
 gross_salary("MA")
