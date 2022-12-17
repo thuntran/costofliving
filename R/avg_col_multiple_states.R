@@ -22,6 +22,11 @@
 #'
 
 avg_col_multiple_states <- function(states) {
+  # Throws an error if the user happens to enter the same state twice
+  if (length(states) != length(unique(states))) {
+    stop("You might have entered the same state twice. Please try again.")
+  }
+
   # map the `net_salary_avg_col_difference()` function to each state in the `states` vector
   state_rows <- map_df(states, net_salary_avg_col_difference)
   return(state_rows)
