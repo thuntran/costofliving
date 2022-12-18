@@ -23,7 +23,7 @@ knitr::opts_chunk$set(
 
 ## Purpose
 
-The goal of `costofliving` is to provide functions and data sets to calculate the average cost of living for a single person earning a minimum wage salary across different states in the United States in 2022. This package contains data from the [MIT Living Wage Calculator](https://livingwage.mit.edu/), [the World Population Review](https://worldpopulationreview.com/), and [the Missouri Economic Research and Information Center](https://meric.mo.gov/).
+The goal of `costofliving` is to provide functions and data sets to calculate the average cost of living for a single person earning a minimum wage salary across different states in the United States in 2022. This package contains data from the [MIT Living Wage Calculator](https://livingwage.mit.edu/), [the World Population Review](https://worldpopulationreview.com/), [the Nerd Wallet](https://www.nerdwallet.com/article/taxes/federal-income-tax-brackets), and [the Labor Law Center]([https://www.laborlawcenter.com/state-minimum-wage-rates/).
 
 ## Target Audience
 
@@ -111,7 +111,7 @@ For more details on how to use the functions and data sets in this package, plea
 # Contributors
 
 - [Thu Tran](https://github.com/thuntran)
-- [Nina Hernandez](http://github.com/nhernandez3)
 - [My My Tran](http://github.com/puppehmama)
+- [Nina Hernandez](http://github.com/nhernandez3)
 
 
