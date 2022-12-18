@@ -98,7 +98,7 @@ avg_col_multiple_states(c("MA", "TX", "IL", "AL"))
 avg_col_multiple_states_plot(c("CA", "FL", "WA", "NY"))
 ```
 
-```{r function-example-6}
+```{r function-example-6, fig.height = 7.5}
 avg_col_multiple_states_plot_all()
 ```
 
