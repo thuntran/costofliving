@@ -17,7 +17,7 @@ status](https://www.r-pkg.org/badges/version/myspotify)](https://CRAN.R-project.
 The goal of `costofliving` is to provide functions and data sets to
 calculate the average cost of living for a single person earning a
 minimum wage salary across different states in the United States in
-2022. This package contains data from the [MIT Living Wage
+2022. This package contains data from [the MIT Living Wage
 Calculator](https://livingwage.mit.edu/), [the World Population
 Review](https://worldpopulationreview.com/), [the Nerd
 Wallet](https://www.nerdwallet.com/), and [the Labor Law
@@ -49,15 +49,15 @@ library(costofliving)
 
 ## Available Datasets
 
-- `us_cost_of_living`: A data set containing the average living costs
-  across states in the U.S., including housing, groceries, medical care,
-  etc. in 2022.
-- `us_minimum_wage`: A data set containing minimum wage across states in
-  the U.S. in 2022.
-- `us_federal_tax_rate`: A data set of the federal tax rates based on
-  income brackets in the U.S. in 2022.
-- `us_state_local_tax_rate`: A data set of the state and average local
-  tax rates across states in the U.S. in 2022.
+-   `us_cost_of_living`: A data set containing the average living costs
+    across states in the U.S., including housing, groceries, medical
+    care, etc. in 2022.
+-   `us_minimum_wage`: A data set containing minimum wage across states
+    in the U.S. in 2022.
+-   `us_federal_tax_rate`: A data set of the federal tax rates based on
+    income brackets in the U.S. in 2022.
+-   `us_state_local_tax_rate`: A data set of the state and average local
+    tax rates across states in the U.S. in 2022.
 
 ### Example: `us_cost_of_living` data set
 
@@ -103,29 +103,30 @@ us_minimum_wage
 
 ## Available Functions
 
-- `gross_salary()`: Calculates the annual gross salary of a single
-  person earning minimum wage at a specific state.
-- `federal_tax_owed()`: Calculates the amount of federal tax owed by an
-  individual earning minimum wage based on federal income tax brackets.
-- `state_local_tax_owed()`: Calculates the amount of state and local tax
-  owed by an individual earning minimum wage.
-- `net_salary()`: Calculates the combined tax amount (federal, state,
-  local taxes) for by an individual earning minimum wage, and obtains
-  the net salary by deducting from the gross salary.
-- `net_salary_avg_col_difference()`: Calculates the difference between
-  the average costs of living by the net salary.
-- `avg_col_multiple_states()`: Calculates the annual gross salary, total
-  tax (federal, state, local), net salary, and difference between
-  average cost of living and net salary of a single person earning
-  minimum wage at one or more states.
-- `avg_col_multiple_states_plot()`: Plots the difference in average cost
-  of living and net salary of a single person earning minimum wage at
-  one or more states.
-- `avg_col_multiple_states_plot_all()`: Plots the difference in average
-  cost of living and net salary of a single person earning minimum wage
-  across all states in the USA.
-- `avg_col_breakdown_plot()`: Plots the average cost of living for a
-  single person at a specific state.
+-   `gross_salary()`: Calculates the annual gross salary of a single
+    person earning minimum wage at a specific state.
+-   `federal_tax_owed()`: Calculates the amount of federal tax owed by
+    an individual earning minimum wage based on federal income tax
+    brackets.
+-   `state_local_tax_owed()`: Calculates the amount of state and local
+    tax owed by an individual earning minimum wage.
+-   `net_salary()`: Calculates the combined tax amount (federal, state,
+    local taxes) for by an individual earning minimum wage, and obtains
+    the net salary by deducting from the gross salary.
+-   `net_salary_avg_col_difference()`: Calculates the difference between
+    the average costs of living by the net salary.
+-   `avg_col_multiple_states()`: Calculates the annual gross salary,
+    total tax (federal, state, local), net salary, and difference
+    between average cost of living and net salary of a single person
+    earning minimum wage at one or more states.
+-   `avg_col_multiple_states_plot()`: Plots the difference in average
+    cost of living and net salary of a single person earning minimum
+    wage at one or more states.
+-   `avg_col_multiple_states_plot_all()`: Plots the difference in
+    average cost of living and net salary of a single person earning
+    minimum wage across all states in the USA.
+-   `avg_col_breakdown_plot()`: Plots the average cost of living for a
+    single person at a specific state.
 
 ### Examples of Function Usage
 
@@ -176,19 +177,19 @@ avg_col_multiple_states(c("MA", "TX", "IL", "AL"))
 avg_col_multiple_states_plot(c("CA", "FL", "WA", "NY"))
 ```
 
-<img src="man/figures/README-example-5-1.png" width="100%" />
+<img src="man/figures/README-function-example-5-1.png" width="100%" />
 
 ``` r
 avg_col_multiple_states_plot_all()
 ```
 
-<img src="man/figures/README-example-6-1.png" width="100%" />
+<img src="man/figures/README-function-example-6-1.png" width="100%" />
 
 ``` r
 avg_col_breakdown_plot("AZ")
 ```
 
-<img src="man/figures/README-example-7-1.png" width="100%" />
+<img src="man/figures/README-function-example-7-1.png" width="100%" />
 
 For more details on how to use the functions and data sets in this
 package, please refer to the
@@ -196,6 +197,6 @@ package, please refer to the
 
 # Contributors
 
-- [Thu Tran](https://github.com/thuntran)
-- [My My Tran](http://github.com/puppehmama)
-- [Nina Hernandez](http://github.com/nhernandez3)
+-   [Thu Tran](https://github.com/thuntran)
+-   [My My Tran](http://github.com/puppehmama)
+-   [Nina Hernandez](http://github.com/nhernandez3)

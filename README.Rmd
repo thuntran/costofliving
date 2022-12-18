@@ -23,7 +23,7 @@ knitr::opts_chunk$set(
 
 ## Purpose
 
-The goal of `costofliving` is to provide functions and data sets to calculate the average cost of living for a single person earning a minimum wage salary across different states in the United States in 2022. This package contains data from the [MIT Living Wage Calculator](https://livingwage.mit.edu/), [the World Population Review](https://worldpopulationreview.com/), [the Nerd Wallet](https://www.nerdwallet.com/), and [the Labor Law Center](https://www.laborlawcenter.com/).
+The goal of `costofliving` is to provide functions and data sets to calculate the average cost of living for a single person earning a minimum wage salary across different states in the United States in 2022. This package contains data from [the MIT Living Wage Calculator](https://livingwage.mit.edu/), [the World Population Review](https://worldpopulationreview.com/), [the Nerd Wallet](https://www.nerdwallet.com/), and [the Labor Law Center](https://www.laborlawcenter.com/).
 
 ## Target Audience
 
@@ -54,13 +54,13 @@ library(costofliving)
 
 ### Example: `us_cost_of_living` data set
 
-```{r}
+```{r dataset-example-1}
 us_cost_of_living
 ```
 
 ### Example: `us_minimum_wage` data set
 
-```{r}
+```{r dataset-example-2}
 us_minimum_wage
 ```
 
@@ -78,31 +78,31 @@ us_minimum_wage
 
 ### Examples of Function Usage
 
-```{r example-1}
+```{r function-example-1}
 gross_salary("CA")
 ```
 
-```{r example-2}
+```{r function-example-2}
 net_salary("TX")
 ```
 
-```{r example-3}
+```{r function-example-3}
 net_salary_avg_col_difference("AL")
 ```
 
-```{r example-4}
+```{r function-example-4}
 avg_col_multiple_states(c("MA", "TX", "IL", "AL"))
 ```
 
-```{r example-5}
+```{r function-example-5}
 avg_col_multiple_states_plot(c("CA", "FL", "WA", "NY"))
 ```
 
-```{r example-6}
+```{r function-example-6}
 avg_col_multiple_states_plot_all()
 ```
 
-```{r example-7}
+```{r function-example-7}
 avg_col_breakdown_plot("AZ")
 ```
 
