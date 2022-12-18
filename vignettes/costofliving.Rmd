@@ -27,7 +27,7 @@ library(forcats)
 
 ## Purpose
 
-The goal of `costofliving` is to provide functions and data sets to calculate the average cost of living for a single person earning a minimum wage salary across different states in the United States in 2022. This package contains data from the [MIT Living Wage Calculator](https://livingwage.mit.edu/), [the World Population Review](https://worldpopulationreview.com/), [the Nerd Wallet](https://www.nerdwallet.com/article/taxes/federal-income-tax-brackets), and [the Labor Law Center]([https://www.laborlawcenter.com/state-minimum-wage-rates/).
+The goal of `costofliving` is to provide functions and data sets to calculate the average cost of living for a single person earning a minimum wage salary across different states in the United States in 2022. This package contains data from the [MIT Living Wage Calculator](https://livingwage.mit.edu/), [the World Population Review](https://worldpopulationreview.com/), [the Nerd Wallet](https://www.nerdwallet.com/), and [the Labor Law Center](https://www.laborlawcenter.com/).
 
 ## Target Audience
 
@@ -76,7 +76,8 @@ us_state_local_tax_rate
 
 ## Available Functions
 
-Note: The functions are able to handle syntax errors if the user inputs an invalid state abbreviation or duplicates of a state.
+Note: The functions are able to handle syntax errors if the user inputs an invalid state abbreviation or duplicates of a state. For example, `gross_salary("ma")` or `gross_salary("Massachusetts")` will throw an error that the input must be a valid state abbreviation and the letters are capitalized. `gross_salary("MA")` is the correct way to use the function. For functions that require a vector of states as input, duplicate states are also invalid, such as `avg_col_multiple_states(c("MA", "TX", "MA"))`. The correct use should be `avg_col_multiple_states(c("MA", "TX"))`.
+
 
   + `gross_salary()`: Calculates the annual gross salary of a single person earning minimum wage at a specific state.
   + `federal_tax_owed()`: Calculates the amount of federal tax owed by an individual earning minimum wage based on federal income tax brackets.
@@ -90,43 +91,43 @@ Note: The functions are able to handle syntax errors if the user inputs an inval
 
 ### Examples of Function Usage
 
-What is the gross salary for a single person earning minimum wage in California?
+#### Example 1. What is the gross salary for a single person earning minimum wage in California?
 
 ```{r example-1}
 gross_salary("CA")
 ```
 
-What is the net salary for a single person earning minimum wage in Texas, after deducting federal, state, and local taxes?
+#### Example 2. What is the net salary for a single person earning minimum wage in Texas, after deducting federal, state, and local taxes?
 
 ```{r example-2}
 net_salary("TX")
 ```
 
-What is the gross salary, tax amount, net salary, and difference between average cost of living and net salary for a single person earning minimum wage in Alabama?
+#### Example 3. What is the gross salary, tax amount, net salary, and difference between average cost of living and net salary for a single person earning minimum wage in Alabama?
 
 ```{r example-3}
 net_salary_avg_col_difference("AL")
 ```
 
-What are the gross salaries, tax amounts, net salaries, and difference between average cost of living and net salary for a single person earning minimum wage across multiple states (Massachusetts, Texas, Illinois, and Alabama)?
+#### Example 4. What are the gross salaries, tax amounts, net salaries, and difference between average cost of living and net salary for a single person earning minimum wage across multiple states (Massachusetts, Texas, Illinois, and Alabama)?
 
 ```{r example-4}
 avg_col_multiple_states(c("MA", "TX", "IL", "AL"))
 ```
 
-What is the breakdown of the average cost of living for a single person earning minimum wage in Arizona?
+#### Example 5. What is the breakdown of the average cost of living for a single person earning minimum wage in Arizona?
 
 ```{r example-7, fig.dim=c(7, 7)}
 avg_col_breakdown_plot("AZ")
 ```
 
-How can I compare the difference in average cost of living and net salary of a single person earning minimum wage in California, Florida, Washington state, and New York state?
+#### Example 6. How can I compare the difference in average cost of living and net salary of a single person earning minimum wage in California, Florida, Washington state, and New York state?
 
 ```{r example-5, fig.dim=c(7, 5.5)}
 avg_col_multiple_states_plot(c("CA", "FL", "WA", "NY"))
 ```
 
-What is the difference in average cost of living and net salary of a single person earning minimum wage across all states in the U.S.? What are the top five states that are livable to earn a minimum wage salary in?**
+#### Example 7. What is the difference in average cost of living and net salary of a single person earning minimum wage across all states in the U.S.? What are the top five states that are livable to earn a minimum wage salary in?
 
 ```{r example-6, fig.dim=c(7, 6.5)}
 avg_col_multiple_states_plot_all()

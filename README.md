@@ -20,9 +20,8 @@ minimum wage salary across different states in the United States in
 2022. This package contains data from the [MIT Living Wage
 Calculator](https://livingwage.mit.edu/), [the World Population
 Review](https://worldpopulationreview.com/), [the Nerd
-Wallet](https://www.nerdwallet.com/article/taxes/federal-income-tax-brackets),
-and [the Labor Law
-Center](%5Bhttps://www.laborlawcenter.com/state-minimum-wage-rates/).
+Wallet](https://www.nerdwallet.com/), and [the Labor Law
+Center](https://www.laborlawcenter.com/).
 
 ## Target Audience
 
