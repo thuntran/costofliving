@@ -129,7 +129,7 @@ avg_col_multiple_states_plot(c("CA", "FL", "WA", "NY"))
 
 #### Example 7. What is the difference in average cost of living and net salary of a single person earning minimum wage across all states in the U.S.? What are the top five states that are livable to earn a minimum wage salary in?
 
-```{r function-eg-7, fig.dim=c(7, 6.5)}
+```{r function-eg-7, fig.dim=c(7, 6.8)}
 avg_col_multiple_states_plot_all()
 ```
 
