@@ -27,7 +27,9 @@ library(forcats)
 
 ## Purpose
 
-The goal of `costofliving` is to provide functions and data sets to calculate the average cost of living for a single person earning a minimum wage salary across different states in the United States in 2022. This package contains data from the [MIT Living Wage Calculator](https://livingwage.mit.edu/), [the World Population Review](https://worldpopulationreview.com/), [the Nerd Wallet](https://www.nerdwallet.com/), and [the Labor Law Center](https://www.laborlawcenter.com/).
+The goal of `costofliving` is to provide functions and data sets to calculate the average cost of living for a single person earning a minimum wage salary across different states in the United States in 2022. 
+
+This package contains data from the [MIT Living Wage Calculator](https://livingwage.mit.edu/), [the World Population Review](https://worldpopulationreview.com/), [the Nerd Wallet](https://www.nerdwallet.com/), and [the Labor Law Center](https://www.laborlawcenter.com/).
 
 ## Target Audience
 
@@ -78,12 +80,11 @@ us_state_local_tax_rate
 
 *Note: The functions are able to handle syntax errors if the user inputs an invalid state abbreviation or duplicates of a state. For example, `gross_salary("ma")` or `gross_salary("Massachusetts")` will throw an error that the input must be a valid state abbreviation and the letters are capitalized. `gross_salary("MA")` is the correct way to use the function. For functions that require a vector of states as input, duplicate states are also invalid, such as `avg_col_multiple_states(c("MA", "TX", "MA"))`. The correct use should be `avg_col_multiple_states(c("MA", "TX"))`.*
 
-
   + `gross_salary()`: Calculates the annual gross salary of a single person earning minimum wage at a specific state.
   + `federal_tax_owed()`: Calculates the amount of federal tax owed by an individual earning minimum wage based on federal income tax brackets.
   + `state_local_tax_owed()`: Calculates the amount of state and local tax owed by an individual earning minimum wage.
-  + `net_salary()`: Calculates the combined tax amount (federal, state, local taxes) for by an individual earning minimum wage, and obtains the net salary by deducting from the gross salary.
-  + `net_salary_avg_col_difference()`: Calculates the difference between the average costs of living by the net salary.
+  + `net_salary()`: Calculates the combined tax amount (federal, state, local taxes) for by an individual earning minimum wage, and obtains the net salary by deducting the combined tax amount from the gross salary.
+  + `net_salary_avg_col_difference()`: Calculates the difference between the average costs of living and the net salary.
   + `avg_col_multiple_states()`: Calculates the annual gross salary, total tax (federal, state, local), net salary, and difference between average cost of living and net salary of a single person earning minimum wage at one or more states.
   + `avg_col_multiple_states_plot()`: Plots the difference in average cost of living and net salary of a single person earning minimum wage at one or more states.
   + `avg_col_multiple_states_plot_all()`: Plots the difference in average cost of living and net salary of a single person earning minimum wage across all states in the USA.
@@ -103,13 +104,13 @@ gross_salary("CA")
 net_salary("TX")
 ```
 
-#### Example 3. What is the gross salary, tax amount, net salary, and difference between average cost of living and net salary for a single person earning minimum wage in Alabama?
+#### Example 3. What is the gross salary, tax amount, net salary, and difference between the average cost of living and the net salary for a single person earning minimum wage in Alabama?
 
 ```{r function-eg-3}
 net_salary_avg_col_difference("AL")
 ```
 
-#### Example 4. What are the gross salaries, tax amounts, net salaries, and difference between average cost of living and net salary for a single person earning minimum wage across multiple states (Massachusetts, Texas, Illinois, and Alabama)?
+#### Example 4. What are the gross salaries, tax amounts, net salaries, and difference between the average cost of living and the net salary for a single person earning minimum wage across multiple states (Massachusetts, Texas, Illinois, and Alabama)?
 
 ```{r function-eg-4}
 avg_col_multiple_states(c("MA", "TX", "IL", "AL"))

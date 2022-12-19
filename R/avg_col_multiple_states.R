@@ -29,5 +29,6 @@ avg_col_multiple_states <- function(states) {
 
   # map the `net_salary_avg_col_difference()` function to each state in the `states` vector
   state_rows <- map_df(states, net_salary_avg_col_difference)
+
   return(state_rows)
 }

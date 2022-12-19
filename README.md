@@ -17,7 +17,9 @@ status](https://www.r-pkg.org/badges/version/myspotify)](https://CRAN.R-project.
 The goal of `costofliving` is to provide functions and data sets to
 calculate the average cost of living for a single person earning a
 minimum wage salary across different states in the United States in
-2022. This package contains data from [the MIT Living Wage
+2022.
+
+This package contains data from [the MIT Living Wage
 Calculator](https://livingwage.mit.edu/), [the World Population
 Review](https://worldpopulationreview.com/), [the Nerd
 Wallet](https://www.nerdwallet.com/), and [the Labor Law
@@ -33,7 +35,7 @@ livable if they a earn minimum wage salary in that state.
 
 ## Installation
 
-You can install the development version of costofliving from
+You can install the development version of `costofliving` from
 [GitHub](https://github.com/) with:
 
 ``` r
@@ -111,9 +113,10 @@ us_minimum_wage
   owed by an individual earning minimum wage.
 - `net_salary()`: Calculates the combined tax amount (federal, state,
   local taxes) for by an individual earning minimum wage, and obtains
-  the net salary by deducting from the gross salary.
+  the net salary by deducting the combined tax amount from the gross
+  salary.
 - `net_salary_avg_col_difference()`: Calculates the difference between
-  the average costs of living by the net salary.
+  the average costs of living and the net salary.
 - `avg_col_multiple_states()`: Calculates the annual gross salary, total
   tax (federal, state, local), net salary, and difference between
   average cost of living and net salary of a single person earning
