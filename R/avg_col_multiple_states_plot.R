@@ -16,8 +16,8 @@ globalVariables(c("avg_col_multiple_states", "net_salary_avg_col_difference", "s
 #'
 #' @param states A list of states, abbreviated (e.g. c("MA", "TX", "IL", "AL"))
 #'
-#' @return A scatter plot of the difference in average cost of living
-#' for one or multiple states
+#' @return A scatter plot of the difference in average cost of living for one or
+#' multiple states
 #'
 #' @export
 #'

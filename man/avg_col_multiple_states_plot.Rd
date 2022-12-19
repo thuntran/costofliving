@@ -10,8 +10,8 @@ avg_col_multiple_states_plot(states)
 \item{states}{A list of states, abbreviated (e.g. c("MA", "TX", "IL", "AL"))}
 }
 \value{
-A scatter plot of the difference in average cost of living
-for one or multiple states
+A scatter plot of the difference in average cost of living for one or
+multiple states
 }
 \description{
 A function that plots the difference in average cost of living and net salary
